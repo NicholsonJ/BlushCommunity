@@ -13,5 +13,5 @@ const selfieSchema = new Schema({
   }
 });
 
-const Selfie = mongoose.model('Product', productSchema);
-module.exports = Product;
+const Selfie = mongoose.model('Selfie', selfieSchema);
+module.exports = Selfie;
