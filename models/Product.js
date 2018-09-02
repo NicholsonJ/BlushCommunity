@@ -11,12 +11,13 @@ const productSchema = new Schema(
         'foundation',
         'blush',
         'lipstick',
+        'lip_liner',
         'eyeshadow',
         'eyeliner',
-        'nail polish',
+        'nail_polish',
         'mascara',
-        'eyebrows',
-        'lipliner'
+        'eyebrow',
+        'bronzer'
       ]
     },
     productColor: String,
