@@ -6495,4 +6495,14 @@ footer {
   padding-top: 50px;
   position: relative; }
 
+.aboutus-pic {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  padding-top: 17px;
+  position: relative; }
+
+c {
+  font-size: 25px; }
+
 /*# sourceMappingURL=style.css.map */
