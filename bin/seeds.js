@@ -28,3 +28,5 @@ let productsToCreate = makeup.map(product => {
 Product.create(productsToCreate).then(productsFromDb => {
   console.log(productsFromDb.length + ' products were created');
 });
+
+//http://makeup-api.herokuapp.com/

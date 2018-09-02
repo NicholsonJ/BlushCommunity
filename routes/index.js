@@ -18,6 +18,10 @@ router.get('/Selfie', ensureLoggedIn('/auth/login'), (req, res, next) => {
   res.render('selfie');
 });
 
+router.post('/Selfie', ensureLoggedIn('/auth/login'), (req, res, next) => {
+  res.render('profile');
+});
+
 router.get('/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
   User.findById(req.params.id).then(userFromDb => {
     res.render('profile', userFromDb);
