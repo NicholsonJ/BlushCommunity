@@ -39,7 +39,7 @@ h3 {
 
 footer {
   background-color: #e3e3e3;
-  color: #3d3b3b;
+  color:black;
   // position: fixed;
   // bottom: 0;
 }
@@ -97,7 +97,6 @@ footer {
 }
 // Index
 .headerPic {
-  // background-image: url(../images/background.jpg);
   text-align: center;
   clear: both;
   background-repeat: no-repeat;
@@ -126,6 +125,8 @@ footer {
 #product {
   margin: 0px;
   padding: 30px;
+  background-color: #e3e3e3;
+  
 }
 
 .row {
@@ -134,7 +135,7 @@ footer {
 }
 
 #about {
-  background-color: #03a89e;
+  background-color:rgb(233, 112, 112);
   color:black;
   padding: 30px;
 }
