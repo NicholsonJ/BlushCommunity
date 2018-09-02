@@ -1,11 +1,9 @@
 <header class="headerPic text-center">
     <div class="header-container pt-auto mt-auto">
-        <h1><b>The Glam Vibe</b></h1>
+        <h1>The Glam Vibe</h1>
         <h4>You go, Girl!!!</h4>
     </div>
 </header>
-
-
 
 <div id="product">
     <div class="container text-center">
@@ -13,32 +11,32 @@
     </div>
     <div class="row">
         <div class="col-md-4 text-center">
-            {{!-- <img src="images/pic1.jpg"></img> --}}
+            <img src="images/pic1.jpg"></img>
             <h3>We are an online community</h3>
         </div>
         <div class="col-md-4 text-center">
-            {{!-- <img src="images/pic1.jpg"></img> --}}
+            <img src="images/pic1.jpg"></img>
             <h3>Share products and looks</h3>
         </div>
         <div class="col-md-4 text-center">
-            {{!-- <img src="images/pic1.jpg"></img> --}}
+            <img src="images/pic1.jpg"></img>
             <h3>Build your own collection</h3>
         </div>
     </div>
 </div>
-<div class="clearfix"></div> 
+<div class="clearfix"></div>
 <!--End of PRODUCT-->
 
- <div id="about" class="text-center">
+<div id="about" class="text-center">
     <h2>About Us</h2>
     <p>It is a complete beauty brand spanning colour cosmetics & skin care</p>
     <div class="row">
         <div class="col-md-6 text-center">
-            {{!-- <img src="images/pic1.jpg"></img> --}}
+            <img src="images/pic1.jpg"></img>
             <p>Bhavana</p>
         </div>
         <div class="col-md-6 text-center">
-            {{!-- <img src="images/pic1.jpg"></img> --}}
+            <img src="images/pic1.jpg"></img>
             <p>Jennifer</p>
         </div>
     </div>
