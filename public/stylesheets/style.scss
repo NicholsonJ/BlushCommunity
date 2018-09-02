@@ -1,11 +1,14 @@
  @import "node_modules/bootstrap/scss/bootstrap";
 
 * {
-  font-family: Poiret One;
+  // font-family:'Permanent Marker', cursive;
+  font-family: 'Kaushan Script', cursive;
+  //font-weight: bold;
+
 }
 
 body {
-  font: 14px "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: 'Kaushan Script', cursive;
 }
 
 a {
@@ -14,11 +17,12 @@ a {
 
 h1 {
   font-family: Poiret One;
-  font-weight: 500;
+  //font-weight:bold;
+
 }
-h2,
-h3 {
-  font-weight: 500;
+h2,h3,h4,h5 {
+  font-weight:bold;
+
 }
 
 .navbar {
@@ -204,7 +208,7 @@ margin-left:auto;
 }
 
 .glamvibe-pic2 {
-  background-image: url(../images/pic3.jpg);
+  background-image: url(../images/beautiful-birthday-blur-318379.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 200px;
@@ -214,10 +218,34 @@ margin-left:auto;
 
 
 .glamvibe-pic3 {
-  background-image: url(../images/beauty-heart.jpg);
+  background-image: url(../images/diana-kadreva-605288-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 200px;
   padding-top:50px;
   position: relative;
+}
+
+
+.aboutus-pic{
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+  padding-top: 17px;
+  position: relative;
+<<<<<<< HEAD
+  border-radius: 50%;
+=======
+>>>>>>> 0ee9df48bf5f76cde69ab7fa5ba7303e5cbde76c
+}
+
+c {
+  font-size: 25px
+<<<<<<< HEAD
+}
+
+.credentials{
+  text-align:center;
+=======
+>>>>>>> 0ee9df48bf5f76cde69ab7fa5ba7303e5cbde76c
 }
