@@ -1,14 +1,13 @@
 
+<div class="credentials">
 <h2>Login</h2>
-
 <form action="/auth/login" method="POST" id="form-container">
-  <label for="username">Username</label>
-  <input id="username" type="text" name="username" placeholder="JonSnow">
 
-  <br><br>
+  <label for="username"></label>
+  <input id="username" type="text" name="username" placeholder="Username">
 
-  <label for="password">Password</label>
-  <input id="password" type="password" name="password" placeholder="Your password">
+  <label for="password"></label>
+  <input id="password" type="password" name="password" placeholder="Password">
   <br>
   {{#if message }}
     <div class="error-message">{{ message }}</div>
@@ -23,3 +22,4 @@
     <a href="/auth/signup">Signup</a>
   </p>
 </form>
+</div>
