@@ -1,8 +1,141 @@
+ @import "node_modules/bootstrap/scss/bootstrap";
+
+* {
+  font-family: Poiret One;
+}
+
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font: 14px "Open Sans", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+  color:black;
+}
+
+h1 {
+  font-family: Poiret One;
+  font-weight: 500;
+}
+h2,
+h3 {
+  //font-family: Georgia, Times, "Times New Roman", serif;
+  font-weight: 500;
+}
+
+.navbar {
+  margin-bottom: 0;
+  border-radius: 0;
+  padding: 1% 0;
+  font-size: 1.2em;
+  border: 0;
+  background-color:rgb(233, 112, 112);
+}
+
+
+.navbar-brand {
+  min-height: 20px;
+  padding: 0 15px 5px;
+}
+
+footer {
+  background-color: #e3e3e3;
+  color:black;
+  // position: fixed;
+  // bottom: 0;
+}
+
+.footer-container {
+  max-width: 59rem;
+  margin: 0 auto;
+}
+
+.footer-copyright {
+  color: #616161;
+  font-size: 0.8125rem;
+  line-height: 1.625rem;
+  display: inline;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+.footer-copyright-right {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.footer-copyright li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.footer-copyright li:after {
+  content: " | ";
+  margin-left: 0.46875rem;
+  margin-right: 0.46875rem;
+}
+
+.footer-copyright-right li {
+  display: inline;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: end;
+}
+
+.footer-separator--thin {
+  height: 0.0625 rem;
+  background: black;
+  border: 0;
+}
+.stores img {
+  width: 50%;
+  float: right;
+}
+// Index
+.headerPic {
+  text-align: center;
+  clear: both;
+  background-repeat: no-repeat;
+  background-size: cover;
+  // height: 90vh;
+  // width: 90vw;
+ 
+}
+
+.header-container {
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 650px;
+  padding-top:50px;
+  position: relative;
+  
+  
+}
+@media (max-width: 600px) {
+  footer {
+    display: none;
+  }
+}
+
+#product {
+  margin: 0px;
+  padding: 30px;
+  background-color: #e3e3e3;
+  
+}
+
+.row {
+  margin: 0px;
+  margin-top: 30px;
+}
+
+#about {
+  background-color:rgb(233, 112, 112);
+  color:black;
+  padding: 30px;
 }
