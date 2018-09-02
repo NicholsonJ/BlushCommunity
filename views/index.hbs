@@ -1,26 +1,48 @@
 <header class="headerPic text-center">
     <div class="header-container pt-auto mt-auto">
-        <h1><b>The Glam Vibe</b></h1>
-        <h4>You go, Girl!!!</h4>
-    </div>
+    <div class = "title-text">
+    <h1><b>The Glam Vibe</b></h1>
+   <h4>You go, Girl!!!</h4>
+   </div>    
+  <div class = "logincontainer">
+  <form action="/auth/login" method="POST" id="form-container">
+  <label for="username"></label>
+  <input id="username" type="text" name="username" placeholder="Email">
+
+  <label for="password"></label>
+  <input id="password" type="password" name="password" placeholder="Password">
+  <br>
+  {{#if message }}
+    <div class="error-message">{{ message }}</div>
+  {{/if}}
+
+  <br><br>
+
+  <button class="button"><span>Login</span></button>
+
+  <p class="account-message">
+    Don't have an account yet?
+    <a href="/auth/signup">Signup</a>
+  </p>
+  </form>
+      </div>
+   </div>
 </header>
-
-
 
 <div id="product">
     <div class="container text-center">
-        <h2>What are we??</h2>
+        <h2>What is Glam Vibe???</h2>
     </div>
     <div class="row">
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-center glamvibe-pic1 ">
             {{!-- <img src="images/pic1.jpg"></img> --}}
             <h3>We are an online community</h3>
         </div>
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-center glamvibe-pic2">
             {{!-- <img src="images/pic1.jpg"></img> --}}
             <h3>Share products and looks</h3>
         </div>
-        <div class="col-md-4 text-center">
+        <div class="col-md-4 text-center glamvibe-pic3">
             {{!-- <img src="images/pic1.jpg"></img> --}}
             <h3>Build your own collection</h3>
         </div>
