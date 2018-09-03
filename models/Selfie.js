@@ -5,10 +5,10 @@ const selfieSchema = new Schema(
   {
     image: String,
     title: String,
-    products: Array,
+    _products: [{ type: Schema.Types.ObjectId, ref: 'Product' }],
     comment: String,
-    _user: {type : Schema.Types.ObjectId, ref: "User"}
-   },
+    _user: { type: Schema.Types.ObjectId, ref: 'User' }
+  },
   {
     timestamps: {
       createdAt: 'created_at',

@@ -1,10 +1,9 @@
- @import "node_modules/bootstrap/scss/bootstrap";
+@import 'node_modules/bootstrap/scss/bootstrap';
 
 * {
   // font-family:'Permanent Marker', cursive;
   font-family: 'Kaushan Script', cursive;
   //font-weight: bold;
-
 }
 
 body {
@@ -12,17 +11,18 @@ body {
 }
 
 a {
-  color:black;
+  color: black;
 }
 
 h1 {
   font-family: Poiret One;
   //font-weight:bold;
-
 }
-h2,h3,h4,h5 {
-  font-weight:bold;
-
+h2,
+h3,
+h4,
+h5 {
+  font-weight: bold;
 }
 
 .navbar {
@@ -31,7 +31,7 @@ h2,h3,h4,h5 {
   padding: 1% 0;
   font-size: 1.2em;
   border: 0;
-  background-color:#dda094;
+  background-color: #dda094;
 }
 
 .navbar-brand {
@@ -41,7 +41,7 @@ h2,h3,h4,h5 {
 
 footer {
   background-color: #e3e3e3;
-  color:black;
+  color: black;
   // position: fixed;
   // bottom: 0;
 }
@@ -75,7 +75,7 @@ footer {
 }
 
 .footer-copyright li:after {
-  content: " | ";
+  content: ' | ';
   margin-left: 0.46875rem;
   margin-right: 0.46875rem;
 }
@@ -105,7 +105,6 @@ footer {
   background-size: cover;
   // height: 90vh;
   // width: 90vw;
- 
 }
 
 .header-container {
@@ -113,10 +112,8 @@ footer {
   background-size: cover;
   background-repeat: no-repeat;
   height: 650px;
-  padding-top:50px;
+  padding-top: 50px;
   position: relative;
-  
-  
 }
 @media (max-width: 600px) {
   footer {
@@ -129,7 +126,6 @@ footer {
   padding: 30px;
   background-color: #dda094;
   // background-color: #e3e3e3;
-  
 }
 .row {
   margin: 0px;
@@ -137,18 +133,18 @@ footer {
 }
 
 #about {
-  background-color:#dda094;
-  color:black;
+  background-color: #dda094;
+  color: black;
   padding: 30px;
 }
 
 .logincontainer {
-position: absolute;
-padding-top: 180px;
-padding-right:15px;
-padding-left:80px;
-margin-right:auto;
-margin-left:auto;
+  position: absolute;
+  padding-top: 180px;
+  padding-right: 15px;
+  padding-left: 80px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .title-text {
@@ -156,7 +152,6 @@ margin-left:auto;
   padding-bottom: 10px;
   padding-left: 90px;
   position: absolute;
-
 }
 
 .button {
@@ -203,7 +198,7 @@ margin-left:auto;
   background-size: cover;
   background-repeat: no-repeat;
   height: 200px;
-  padding-top:50px;
+  padding-top: 50px;
   position: relative;
 }
 
@@ -212,22 +207,20 @@ margin-left:auto;
   background-size: cover;
   background-repeat: no-repeat;
   height: 200px;
-  padding-top:50px;
+  padding-top: 50px;
   position: relative;
 }
-
 
 .glamvibe-pic3 {
   background-image: url(../images/diana-kadreva-605288-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   height: 200px;
-  padding-top:50px;
+  padding-top: 50px;
   position: relative;
 }
 
-
-.aboutus-pic{
+.aboutus-pic {
   background-size: cover;
   background-repeat: no-repeat;
   height: 200px;
@@ -237,15 +230,124 @@ margin-left:auto;
 }
 
 c {
-  font-size: 25px
+  font-size: 25px;
 }
 
-.credentials{
+.credentials {
   background-image: url(../images/background.jpg);
-  text-align:center;
+  text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
   height: 650px;
-  padding-top:50px;
+  padding-top: 50px;
   position: relative;
+}
+
+.hovereffect {
+  width: 100%;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  cursor: default;
+}
+
+.hovereffect .overlay {
+  position: absolute;
+  overflow: hidden;
+  width: 80%;
+  height: 80%;
+  left: 10%;
+  top: 10%;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+}
+
+.hovereffect:hover .overlay {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.hovereffect img {
+  display: block;
+  position: relative;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.hovereffect:hover img {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
+  filter: brightness(0.6);
+  -webkit-filter: brightness(0.6);
+}
+
+.hovereffect h2 {
+  text-transform: uppercase;
+  text-align: center;
+  position: relative;
+  font-size: 17px;
+  background-color: transparent;
+  color: #fff;
+  padding: 1em 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+.hovereffect a,
+.hovereffect p {
+  color: #fff;
+  padding: 1em 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+.hovereffect:hover a,
+.hovereffect:hover p,
+.hovereffect:hover h2 {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+.fb-profile img.fb-image-lg {
+  z-index: 0;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.fb-image-profile {
+  margin: -90px 10px 0px 50px;
+  z-index: 9;
+  width: 20%;
+}
+
+@media (max-width: 768px) {
+  .fb-profile-text > h1 {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .fb-image-profile {
+    margin: -45px 10px 0px 25px;
+    z-index: 9;
+    width: 20%;
+  }
 }
