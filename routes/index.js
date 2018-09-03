@@ -60,9 +60,9 @@ router.post('/editProfile', ensureLoggedIn('/auth/login'), (req, res, next) => {
   });
 });
 
-router.get('/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
-  User.findById(req.params.id).then(userFromDb => {
-    res.render('profile/profile', userFromDb);
+router.get('/profile', ensureLoggedIn('/auth/login'), (req, res, next) => {
+  User.findById(req.user._id).then(userFromDb => {
+    res.render('profile/show', userFromDb);
   });
 });
 
