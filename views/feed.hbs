@@ -1,12 +1,7 @@
 <h2>This is your feed</h2>
-<ul>
-  {{#each selfieFromDb}}
-  <li>
-    {{this._user.username}}--
-    <img src="{{this.image}}" alt="img" height="20"> 
-    {{this.title}}--
-    {{this.products}}--
-    {{this.comment}}--
-  </li>
-  {{/each}}
-</ul>
+
+
+
+<div class="row">
+  {{#each selfieFromDb}} {{>selfieCard this}} {{/each}}
+</div>
