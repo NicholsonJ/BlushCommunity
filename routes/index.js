@@ -8,7 +8,7 @@ router.get('/', (req, res, next) => {
   res.render('index');
 });
 
-router.get('/Feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
+router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
   User.find().then(userFromDb => {
     res.render('feed', { userFromDb: userFromDb });
   });
