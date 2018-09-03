@@ -13,10 +13,10 @@ router.get('/', (req, res, next) => {
 
 router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
   Selfie.find()
-  .populate('_user')
-  .then(selfieFromDb => {
-    res.render('feed', { selfieFromDb: selfieFromDb });
-  });
+    .populate('_user')
+    .then(selfieFromDb => {
+      res.render('feed', { selfieFromDb: selfieFromDb });
+    });
 });
 
 router.get('/selfie', ensureLoggedIn('/auth/login'), (req, res, next) => {
@@ -49,7 +49,13 @@ router.get('/editProfile', ensureLoggedIn('/auth/login'), (req, res, next) => {
 });
 
 router.post('/editProfile', ensureLoggedIn('/auth/login'), (req, res, next) => {
-  // User.update()
+  const updateProfile = {
+    image: req.body.image
+  };
+
+  User.update(updateProfile).then(selfieFromDb => {
+    console.log(selfieFromDb.title + ' was updated');
+  });
 });
 
 router.get('/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
