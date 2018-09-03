@@ -1,34 +1,31 @@
-
-
 <header class="headerPic text-center">
     <div class="header-container pt-auto mt-auto">
-    <div class = "title-text">
-    <h1><b>The Glam Vibe</b></h1>
-   <h4>You go, Girl!</h4>
-   </div>    
-  <div class = "logincontainer">
-  <form action="/auth/login" method="POST" id="form-container">
-  <label for="username"></label>
-  <input id="username" type="text" name="username" placeholder="Email">
+        <div class="title-text">
+            <h1><b>The Glam Vibe</b></h1>
+            <h4>You go, Girl!</h4>
+        </div>
+        <div class="logincontainer">
+            <form action="/auth/login" method="POST" id="form-container">
+                <label for="username"></label>
+                <input id="username" type="text" name="username" placeholder="Email">
 
-  <label for="password"></label>
-  <input id="password" type="password" name="password" placeholder="Password">
-  <br>
-  {{#if message }}
-    <div class="error-message">{{ message }}</div>
-  {{/if}}
+                <label for="password"></label>
+                <input id="password" type="password" name="password" placeholder="Password">
+                <br> {{#if message }}
+                <div class="error-message">{{ message }}</div>
+                {{/if}}
 
-  <br><br>
+                <br><br>
 
-  <button class="button"><span>Login</span></button>
+                <button class="button"><span>Login</span></button>
 
-  <h5 class="account-message">
-    Don't have an account yet?
-    <a href="/auth/signup">Signup</a>
-  </h5>
-  </form>
+                <h5 class="account-message">
+                    Don't have an account yet?
+                    <a href="/auth/signup">Signup</a>
+                </h5>
+            </form>
+        </div>
     </div>
-   </div>
 </header>
 
 <div id="product">
@@ -50,118 +47,36 @@
         </div>
     </div>
 </div>
-<div class="clearfix"></div> 
+<div class="clearfix"></div>
 <!--End of PRODUCT-->
 
- <div id="about" class="text-center">
+<div id="about" class="text-center">
     <h2>About Us</h2>
     <h5>It is a complete beauty brand spanning colour cosmetics & skin care</h5>
     <div class="row">
 
-  <div class="col-md-6 text-center "> 
-  <img class ="aboutus-pic" src="../images/bhavs.png" alt="Avatar">
-  <c><p>Bhavana</p></c>
-  </div>
+        <div class="col-md-6 text-center ">
+            <img class="aboutus-pic" src="../images/bhavs.png" alt="Avatar">
+            <c>
+                <p>Bhavana</p>
+            </c>
+        </div>
 
-  <div class="col-md-6 text-center"> 
-  <img class ="aboutus-pic" src="../images/jen.png" alt="Avatar" >
-  <c><p>Jennifer</p></c>
-  </div>
-
-
-  </div>
-
-
-
+        <div class="col-md-6 text-center">
+            <img class="aboutus-pic" src="../images/jen.png" alt="Avatar">
+            <c>
+                <p>Jennifer</p>
+            </c>
+        </div>
 
 
     </div>
+
+
+
+
+
+</div>
 </div>
 <div class="clearfix"></div>
 <!--End of ABOUT-->
-
-
-<!-- Footer -->
-<footer class="page-footer font-small pt-4 pb-4">
-    <div class="footer-container">
-        <!-- Footer Links -->
-        <div class="container-fluid">
-            <!-- Grid row -->
-            <div class="row">
-                <!-- Grid column -->
-                <div class="col-md-4">
-                    <h5 class="text-uppercase">Contact</h5>
-                    <p>
-                        <i class="fa fa-home mr-3"></i>WeWork Berlin</p>
-                    <p>
-                        <i class="fa fa-envelope mr-3"></i>info@theglamvibe.com</p>
-                    <p>
-                        <i class="fa fa-phone mr-3"></i> +49 1762425262</p>
-                </div>
-                <!-- Grid column -->
-                <!-- Grid column -->
-                <div class="col-md-4">
-                    <!-- Links -->
-                    <h5 class="text-uppercase">More Info</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="/">Home</a>
-                        </li>
-                        <li>
-                            <a href="#about">About Us</a>
-                        </li>
-                        <li>
-                            <a href="#product">Features</a>
-                        </li>
-                        <li>
-                            <a href="#!">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <div class="float-right stores">
-                        <img src="/images/downloadicons.png" class="img-fluid">
-                    </div>
-                </div>
-                <!-- Grid column -->
-            </div>
-            <!-- Grid row -->
-        </div>
-        <!-- Footer Links -->
-
-        <!-- Copyright -->
-        <div class="row-xs">
-            <div class="col-xs-12">
-                <hr class="footer-seperator--thin">
-            </div>
-        </div>
-        <div class="row middle-xs ios-8-block-row last-row">
-            <div class="col-sm-8 col-xs-12">
-                <ul class="footer-copyright">
-                    <li> © 2018
-                        <a href="/">theglamvibe.com</a>
-                    </li>
-                    <li>Privacy policy</li>
-                    <li>Terms</li>
-                    <li>All rights reserved</li>
-                </ul>
-            </div>
-            <div class="col-sm-4 col-xs-12 end-sm">
-                <ul class="footer-copyright-right float-right">
-                    <li>
-                        <i class="fab fa-facebook mr-3"></i>
-                    </li>
-                    <li>
-                        <i class="fab fa-instagram mr-3"></i>
-                    </li>
-                    <li>
-                        <i class="fab fa-linkedin mr-3"></i>
-                    </li>
-                </ul>
-
-            </div>
-        </div>
-        <!-- Copyright -->
-    </div>
-</footer>
-<!-- Footer -->
