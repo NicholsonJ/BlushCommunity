@@ -71,9 +71,18 @@ app.use(session({
   saveUninitialized: true,
   store: new MongoStore( { mongooseConnection: mongoose.connection })
 }))
+
+
 app.use(flash());
 require('./passport')(app);
-    
+
+app.use((req,res,next) => {
+  console.log("I WAS TRIGGERED");
+  res.locals.isConnected = req.isAuthenticated()
+  //res.locals.isAdmin = req.user && req.user.role === 'ADMIN'
+  next()
+})
+
 
 const index = require('./routes/index');
 app.use('/', index);

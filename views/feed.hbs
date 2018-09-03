@@ -1,13 +1,15 @@
 <h2>This is your feed</h2>
 
 <ul>
-  {{#each userFromDb}}
+  {{#each selfiefromDB}}
   <li>
     <a href="/{{this._id}}">
-      {{this.username}}
+      {{this.user}}
     </a>
-
-
+    <img src="{{this.Image}}"height="30">
+    {{this.title}}
+    {{this.products}}
+    {{this.comment}}
   </li>
   {{/each}}
 </ul>
