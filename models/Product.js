@@ -20,8 +20,8 @@ const productSchema = new Schema(
         'bronzer'
       ]
     },
-    productColor: Array,
-    Image: String,
+    productColor: [String],
+    image: String,
     website: String
   },
   {

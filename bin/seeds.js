@@ -20,13 +20,15 @@ let productsToCreate = makeup.map(product => {
     name: product.name,
     productType: product.product_type,
     productColor: product.product_colors,
-    Image: product.image_link,
+    image: product.image_link,
     website: product.website_link
   };
 });
 
-Product.create(productsToCreate).then(productsFromDb => {
-  console.log(productsFromDb.length + ' products were created');
+Product.deleteMany().then(() => {
+  Product.create(productsToCreate).then(productsFromDb => {
+    console.log(productsFromDb.length + ' products were created');
+  });
 });
 
 //http://makeup-api.herokuapp.com/
