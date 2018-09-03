@@ -40,9 +40,9 @@ router.get('/editProfile', ensureLoggedIn('/auth/login'), (req, res, next) => {
   });
 });
 
-router.post('/editProfile', ensureLoggedIn('/auth/login'), (req,res,next) => {
-  User.update()
-}
+router.post('/editProfile', ensureLoggedIn('/auth/login'), (req, res, next) => {
+  // User.update()
+});
 
 router.get('/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
   User.findById(req.params.id).then(userFromDb => {
