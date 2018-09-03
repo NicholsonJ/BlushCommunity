@@ -7,8 +7,8 @@ const selfieSchema = new Schema(
     title: String,
     products: Array,
     comment: String,
-    user: Schema.Types.ObjectId
-  },
+    _user: {type : Schema.Types.ObjectId, ref: "User"}
+   },
   {
     timestamps: {
       createdAt: 'created_at',
