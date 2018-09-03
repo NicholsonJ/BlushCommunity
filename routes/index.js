@@ -19,7 +19,7 @@ router.get('/Selfie', ensureLoggedIn('/auth/login'), (req, res, next) => {
 });
 
 router.post('/Selfie', ensureLoggedIn('/auth/login'), (req, res, next) => {
-  res.render('profile');
+  res.redirect('/feed');
 });
 
 router.get('/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {

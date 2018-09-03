@@ -5,7 +5,7 @@ const selfieSchema = new Schema(
   {
     Image: String,
     title: String,
-    products: [String],
+    products: Array,
     comment: String
   },
   {
