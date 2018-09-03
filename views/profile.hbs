@@ -4,7 +4,12 @@
 <a href="/editProfile">Edit your Profile Info</a>
 
 <h2>Selfies</h2>
+<div class="container">
 
+  <div class="row">
+    {{#each selfieFromDb}} {{>selfieCard this}} {{/each}}
+  </div>
+</div>
 
 <h2>My makeup bag</h2>
 
