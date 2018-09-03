@@ -1,16 +1,14 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const PSchema = new Schema(
+const productUserSchema = new Schema(
   {
-    username: String,
-    password: String,
-    image: {
-      type: String,
-      default: '../public/images/DefaultProfileImg.jpg'
-    }
+    _user: { type: Schema.Types.ObjectId, ref: 'User' },
+    _product: { type: Schema.Types.ObjectId, ref: 'Product' }
   },
+  
   {
+  
     timestamps: {
       createdAt: 'created_at',
       updatedAt: 'updated_at'
@@ -18,5 +16,5 @@ const PSchema = new Schema(
   }
 );
 
-const User = mongoose.model('User', userSchema);
-module.exports = User;
+const ProductUser = mongoose.model('ProductUser', productUserSchema);
+module.exports = ProductUser;
