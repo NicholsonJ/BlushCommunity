@@ -41,7 +41,13 @@ router.get('/editProfile', ensureLoggedIn('/auth/login'), (req, res, next) => {
 });
 
 router.post('/editProfile', ensureLoggedIn('/auth/login'), (req, res, next) => {
-  // User.update()
+  const updateProfile = {
+    image: req.body.image
+  };
+
+  User.update(updateProfile).then(selfieFromDb => {
+    console.log(selfieFromDb.title + ' was updated');
+  });
 });
 
 router.get('/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
