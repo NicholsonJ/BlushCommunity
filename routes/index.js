@@ -25,7 +25,7 @@ router.post('/Selfie', ensureLoggedIn('/auth/login'), (req, res, next) => {
     image: req.body.selfPic,
     comment: req.body.comment,
     products: req.body.products,
-    user: req.user._id
+    _user: req.user._id
   };
   console.log(selfieInfo);
   Selfie.create(selfieInfo).then(selfieFromDb => {
@@ -33,6 +33,16 @@ router.post('/Selfie', ensureLoggedIn('/auth/login'), (req, res, next) => {
   });
   res.redirect('/feed');
 });
+
+router.get('/editProfile', ensureLoggedIn('/auth/login'), (req, res, next) => {
+  User.findById(req.user.id).then(userFromDb => {
+    res.render('editProfile', userFromDb);
+  });
+});
+
+router.post('/editProfile', ensureLoggedIn('/auth/login'), (req,res,next) => {
+  User.update()
+}
 
 router.get('/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
   User.findById(req.params.id).then(userFromDb => {
