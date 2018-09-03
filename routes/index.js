@@ -10,8 +10,10 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
-  User.find().then(userFromDb => {
-    res.render('feed', { userFromDb: userFromDb });
+  Selfie.find()
+  .populate('_user')
+  .then(selfieFromDb => {
+    res.render('feed', { selfieFromDb: selfieFromDb });
   });
 });
 
