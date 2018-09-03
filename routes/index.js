@@ -24,7 +24,8 @@ router.post('/Selfie', ensureLoggedIn('/auth/login'), (req, res, next) => {
     title: req.body.title,
     image: req.body.selfPic,
     comment: req.body.comment,
-    products: req.body.products
+    products: req.body.products,
+    user: req.user._id
   };
   console.log(selfieInfo);
   Selfie.create(selfieInfo).then(selfieFromDb => {

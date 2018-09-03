@@ -6,7 +6,8 @@ const selfieSchema = new Schema(
     image: String,
     title: String,
     products: Array,
-    comment: String
+    comment: String,
+    user: Schema.Types.ObjectId
   },
   {
     timestamps: {
