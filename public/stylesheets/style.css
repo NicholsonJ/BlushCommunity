@@ -6505,6 +6505,12 @@ c {
   font-size: 25px; }
 
 .credentials {
-  text-align: center; }
+  background-image: url(../images/background.jpg);
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 650px;
+  padding-top: 50px;
+  position: relative; }
 
 /*# sourceMappingURL=style.css.map */
