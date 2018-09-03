@@ -1,9 +1,10 @@
 <h2>Let's post a selfie</h2>
 
-<form action="/selfie" method="post" id="selfie-form">
-  Your Selfie: <input type="file" name="selfPic" id="selfie-image"><br><br> Give us a Title: <input type="text" name="title"
-    placeholder="Check out my look!" id="selfie-title"><br><br> What products did you use? <input type="text" name="products"
-    placeholder="Maybe it's..." id="selfie-products"><br><br> Tell us about it! <br><textarea name="comment" id="comment" cols="30"
-    rows="10" maxlength="150" placeholder="This only took 10 minutes!"></textarea><br><br>
+<form action="/selfie" method="post" id="selfie-form" enctype="multipart/form-data">
+  Your Selfie: <input type="file" name="selfPic" accept="image/*"><br><br> 
+  Give us a Title: <input type="text" name="title" placeholder="Check out my look!" id="selfie-title"><br><br> 
+  What products did you use? <input type="text" name="products" placeholder="Maybe it's..." id="selfie-products"><br><br> 
+  Tell us about it! <br><textarea name="comment" id="comment" cols="30"
+  rows="10" maxlength="150" placeholder="This only took 10 minutes!"></textarea><br><br>
   <button type="submit" id="submit">Submit</button>
 </form>
