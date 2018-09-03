@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const selfieSchema = new Schema(
   {
-    Image: String,
+    image: String,
     title: String,
     products: Array,
     comment: String
