@@ -3,10 +3,11 @@ const Schema = mongoose.Schema;
 
 const selfieSchema = new Schema(
   {
-    Image: String,
+    image: String,
     title: String,
     products: Array,
-    comment: String
+    comment: String,
+    user: Schema.Types.ObjectId
   },
   {
     timestamps: {

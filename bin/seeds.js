@@ -19,7 +19,7 @@ let productsToCreate = makeup.map(product => {
     brand: product.brand,
     name: product.name,
     productType: product.product_type,
-    productColor: product.product_colors.colour_name,
+    productColor: product.product_colors,
     Image: product.image_link,
     website: product.website_link
   };
