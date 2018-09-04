@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
 const User = require('../models/User');
+const Product = require('../models/Product');
 const Selfie = require('../models/Selfie');
 const uploadCloud = require('../config/cloudinary.js');
 
@@ -11,10 +12,23 @@ router.get('/', (req, res, next) => {
 });
 
 router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
-  Selfie.find()
-    .populate('_user')
-    .then(selfieFromDb => {
-      res.render('feed', { selfieFromDb: selfieFromDb });
+  let filter = {}
+  if (req.query.brand) {
+    filter.brand = req.query.brand
+  }
+
+  if (req.query.productType) {
+    filter.productType = req.query.productType
+  }
+
+  Promise.all([
+    Selfie.find().populate('_user'),
+    Product.find(filter)
+  
+    
+  ])
+    .then(([selfieFromDb, productsFromDb]) => {
+      res.render('feed', { selfieFromDb: selfieFromDb, productsFromDb: productsFromDb });
     });
 });
 
