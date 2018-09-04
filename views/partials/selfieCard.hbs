@@ -1,11 +1,12 @@
-<div class="col-sm mt-3 ">
+<div class="col-sm mt-3 mx-auto">
   <div class="card hovereffect border-0" style="width: 18rem;">
     <img class="card-img img-responsive" src={{image}} alt="Card image cap">
     <div class="card-body overlay">
       <h5 class="card-title">{{title}}</h5>
       <p class="card-text">{{comment}}</p>
       <ul class="list-group list-group-flush">
-        <li class="list-group-item">{{products}}
+        {{#each _products}}
+        <li class="list-group-item">{{this}} {{/each}}
       </ul>
     </div>
   </div>

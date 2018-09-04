@@ -6602,7 +6602,7 @@ c {
   margin-bottom: 10px; }
 
 .fb-image-profile {
-  margin: -90px 10px 0px 50px;
+  margin: -90px 10px 30px 50px;
   z-index: 9;
   width: 20%; }
 
@@ -6615,6 +6615,7 @@ c {
     z-index: 9;
     width: 20%; } }
 
+<<<<<<< HEAD
 /* Style the submit button*/
 input[type=submit] {
   background-color: #dda094;
@@ -6623,5 +6624,10 @@ input[type=submit] {
   border: none;
   border-radius: 4px;
   cursor: pointer; }
+=======
+.selfie {
+  padding: 30px;
+  background-color: #dda094; }
+>>>>>>> 1d635bf29431406153f35003b919f79ab42e7b66
 
 /*# sourceMappingURL=style.css.map */

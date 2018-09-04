@@ -86,6 +86,12 @@ app.use((req, res, next) => {
 const index = require('./routes/index');
 app.use('/', index);
 
+const profile = require('./routes/profile');
+app.use('/', profile);
+
+const selfie = require('./routes/selfie');
+app.use('/', selfie);
+
 const authRoutes = require('./routes/auth');
 app.use('/auth', authRoutes);
 

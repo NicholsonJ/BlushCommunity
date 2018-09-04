@@ -1,39 +1,30 @@
- {{!--
-<section class="jumbotron text-xs-center">
-  <div class="container text-center">
-    <div>
-
-
-      <img class="center" src={{image}} alt="This is your profile pic!" height="200">
-      <h1 class="jumbotron-heading">Your Profile, {{username}}</h1>
-    </div>
-    <div>
-      <a href="/editProfile" class="btn text-muted">Edit your Profile Info</a>
-    </div>
-  </div>
-</section> --}}
-
 <div class="container">
   <div class="fb-profile">
-    {{!-- <img align="left" class="fb-image-lg" src="/images/brick.jpg" alt="Profile image example" height="200"> --}}
+    <img align="left" class="fb-image-lg" src="/images/profileCover.jpg" alt="Profile image example" height="200">
 
-    <img align="left" class="fb-image-profile thumbnail" src={{image}} alt="This is your profile pic!">
+    <img align="left" class="fb-image-profile thumbnail" src={{user.image}} alt="This is your profile pic!">
     <div class="fb-image-text">
-      <h1>{{username}}</h1>
+      <h1>{{user.username}}</h1>
       <p>Girls just wanna have fun.</p>
     </div>
 
   </div>
 </div> <!-- /container -->
+<br>
+<div class="container selfie text-center">
 
-<h2>Selfies</h2>
-<div class="container">
+  <h2>Selfies</h2>
+  <div class="container">
 
-  <div class="row">
-    {{#each selfieFromDb}} {{>selfieCard this}} {{/each}}
+    <div class="row">
+      {{#each selfieFromDb}} {{>selfieCard this}} {{/each}}
+    </div>
   </div>
 </div>
+<div class="container text-center">
 
-<h2>My makeup bag</h2>
-
-<h2>Love these looks</h2>
+  <h2>My makeup bag</h2>
+</div>
+<div class="container selfie text-center">
+  <h2>Love these looks</h2>
+</div>
