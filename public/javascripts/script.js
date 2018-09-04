@@ -11,7 +11,7 @@ document.addEventListener(
 // });
 
 function likeThis($this) {
-  event.preventDefault();
+  // event.preventDefault();
   console.log('button clicked');
   const selfie_data = $this.id;
 
@@ -21,33 +21,7 @@ function likeThis($this) {
   // }
   console.log('data: ' + selfie_data);
   // console.log('user: ' + user_data);
-  axios.post('http://localhost:3000/likes/new', selfie_data).then(response => {
+  axios.post('http://localhost:3000/likes/new', { selfie_data: selfie_data }).then(response => {
     console.log(response);
-
-    // $.post('../../models/Likes.js', { _selfie: selfie_data, _user: user_data }, function(json) {
-    //
-    // });
   });
 }
-
-// document.getElementById("character-form").onsubmit = function() {
-//   event.preventDefault();
-
-//   const characterInfo = {
-//     name: document.getElementById("the-name-input").value,
-//     occupation: document.getElementById("the-occupation-input").value,
-//     weapon: document.getElementById("the-weapon-input").value
-//   };
-
-//         // const newCharacterHtml = `
-//         // <li>
-//         //   <h3> ${response.data.name} </h3>
-//         //   <p> Id: ${response.data.id} </p>
-//         // </li>
-//         // `;
-//         // document.getElementById("characters-list").innerHTML += newCharacterHtml;
-//     })
-//     .catch(error => {
-//         console.log(error)
-//     })
-// });

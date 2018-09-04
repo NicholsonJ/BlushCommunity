@@ -33,8 +33,9 @@ router.post(
 );
 
 router.post('/likes/new', (req, res) => {
-  console.log('WE ARE HERE!!!');
-  const selfieData = req.body.key;
+  const selfieData = req.body.selfie_data;
+
+  console.log('selfieData: ' + selfieData);
   const userData = req.user._id;
   const likeToCreate = {
     _user: userData,

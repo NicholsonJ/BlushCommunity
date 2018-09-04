@@ -2,7 +2,7 @@
   <div class="fb-profile">
     <img align="left" class="fb-image-lg" src="/images/profileCover.jpg" alt="Profile image example" height="200">
 
-    <img align="left" class="fb-image-profile thumbnail" src={{user.image}} alt="This is your profile pic!"width="200" height="300">
+    <img align="left" class="fb-image-profile thumbnail" src={{user.image}} alt="This is your profile pic!">
     <div class="fb-image-text">
       <h1>{{user.username}}</h1>
       <p>Girls just wanna have fun.</p>
@@ -27,4 +27,11 @@
 </div>
 <div class="container selfie text-center">
   <h2>Love these looks</h2>
+  <div class="container">
+
+    <div class="row">
+      {{#each likes}} {{>selfieCard this._selfie}} {{/each}}
+    </div>
+  </div>
+</div>
 </div>

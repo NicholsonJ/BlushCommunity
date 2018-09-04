@@ -3,6 +3,7 @@ const router = express.Router();
 const ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
 const User = require('../models/User');
 const Selfie = require('../models/Selfie');
+const Likes = require('../models/Likes');
 const uploadCloud = require('../config/cloudinary.js');
 
 router.get('/editProfile', ensureLoggedIn('/auth/login'), (req, res, next) => {
@@ -26,7 +27,15 @@ router.get('/profile', ensureLoggedIn('/auth/login'), (req, res, next) => {
     Selfie.find({ _user: req.user._id })
       .populate('_user')
       .then(selfieFromDb => {
-        res.render('profile/show', { selfieFromDb: selfieFromDb, user: userFromDb });
+        Likes.find({ _user: req.user._id })
+          .populate('_selfie')
+          .then(likesFromDb => {
+            res.render('profile/show', {
+              selfieFromDb: selfieFromDb,
+              user: userFromDb,
+              likes: likesFromDb
+            });
+          });
       });
   });
 });
