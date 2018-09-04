@@ -4,10 +4,14 @@
     <div class="card-body overlay">
       <h5 class="card-title">{{title}}</h5>
       <p class="card-text">{{comment}}</p>
+      <button type="button" class="btn likebutton btn-sm" id={{ _id }} user={{_user}} onclick="likeThis(this)">
+        Like
+      </button>
+      {{!--
       <ul class="list-group list-group-flush">
         {{#each _products}}
         <li class="list-group-item">{{this}} {{/each}}
-      </ul>
+      </ul> --}}
     </div>
   </div>
 </div>

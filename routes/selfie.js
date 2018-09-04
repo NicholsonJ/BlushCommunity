@@ -31,4 +31,9 @@ router.post(
   }
 );
 
+router.post('/likes/new', (req, res) => {
+  console.log('WE ARE HERE!!!');
+  res.send('New like created!!');
+});
+
 module.exports = router;
