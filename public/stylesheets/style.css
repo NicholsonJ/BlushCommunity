@@ -6326,7 +6326,7 @@ a {
   color: black; }
 
 h1 {
-  font-family: Poiret One; }
+  font-family: 'Kaushan Script', cursive; }
 
 h2,
 h3,
@@ -6615,9 +6615,12 @@ c {
     z-index: 9;
     width: 20%; } }
 
+<<<<<<< HEAD
 .likebutton {
   background-color: #dda094; }
 
+=======
+>>>>>>> cdf7ee017bdc90cb98a4d19a3bdf474f7016a4ff
 /* Style the submit button*/
 input[type='submit'] {
   background-color: #dda094;
@@ -6630,5 +6633,37 @@ input[type='submit'] {
 .selfie {
   padding: 30px;
   background-color: #dda094; }
+<<<<<<< HEAD
+=======
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 10%;
+  padding: 10px;
+  background: #dda094;
+  color: black;
+  font-size: 17px;
+  border-left: none;
+  /* Prevent double borders */
+  cursor: pointer;
+  border-radius: 20px; }
+
+form.example button:hover {
+  background: #dda094; }
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+.search {
+  padding: 20px; }
+
+ul {
+  max-height: 300px;
+  overflow-y: auto; }
+>>>>>>> cdf7ee017bdc90cb98a4d19a3bdf474f7016a4ff
 
 /*# sourceMappingURL=style.css.map */
