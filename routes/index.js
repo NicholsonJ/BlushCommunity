@@ -13,11 +13,25 @@ router.get('/', (req, res, next) => {
 router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
   console.log(req.query,"hello")
   let filter = {}
-  if (req.query.brand && req.query.productType) {
+  if (req.query.brand && req.query.products) {
+    Promise.all([
+      Selfie.find().populate('_user'),
+      Product.find( { $and: [ { brand: { $eq: req.query.brand} }, { productType: { $eq: req.query.products} } ] } )
+    ])
+      .then(([selfieFromDb, productsFromDb]) => {
+        console.log( productsFromDb )
+        res.render('feed', { selfieFromDb: selfieFromDb, productsFromDb: productsFromDb });
+      });
+    
   
-    filter.brand = req.query.brand
-    filter.productType = req.query.productType
-    console.log(productType)
+    // filter.brand = req.query.brand
+    // filter.productType = req.query.productType
+    // console.log(productType)
+  } else {
+    Selfie.find().populate('_user')
+    .then((selfieFromDb) => {
+      res.render('feed', { selfieFromDb: selfieFromDb });
+    });
   }
 
   // if (req.query.productType) {
@@ -25,15 +39,6 @@ router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
   //   filter.productType = req.query.productType
   // }
 
-  Promise.all([
-    Selfie.find().populate('_user'),
-    Product.find(filter)
-  
-    
-  ])
-    .then(([selfieFromDb, productsFromDb]) => {
-      res.render('feed', { selfieFromDb: selfieFromDb, productsFromDb: productsFromDb });
-    });
 });
 
 module.exports = router;
