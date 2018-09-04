@@ -6606,6 +6606,10 @@ c {
   z-index: 9;
   width: 20%; }
 
+.card-img {
+  height: 100%;
+  object-fit: cover; }
+
 @media (max-width: 768px) {
   .fb-profile-text > h1 {
     font-weight: 700;
@@ -6649,7 +6653,7 @@ form.example button:hover {
 
 /* Clear floats */
 form.example::after {
-  content: "";
+  content: '';
   clear: both;
   display: table; }
 
