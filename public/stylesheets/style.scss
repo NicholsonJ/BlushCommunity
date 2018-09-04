@@ -19,7 +19,7 @@ a {
 }
 
 h1 {
-  font-family:'Kaushan Script', cursive ;
+  font-family: 'Kaushan Script', cursive;
   //font-weight:bold;
 }
 h2,
@@ -343,6 +343,11 @@ c {
   width: 20%;
 }
 
+.card-img {
+  height: 100%;
+  object-fit: cover;
+}
+
 @media (max-width: 768px) {
   .fb-profile-text > h1 {
     font-weight: 700;
@@ -390,32 +395,37 @@ form.example button {
   float: left;
   width: 10%;
   padding: 10px;
-  background:#dda094;
-  color:black;
+  background: #dda094;
+  color: black;
   font-size: 17px;
   border-left: none; /* Prevent double borders */
   cursor: pointer;
-  border-radius:20px;
+  border-radius: 20px;
 }
 
 form.example button:hover {
-  background:#dda094;
+  background: #dda094;
 }
 
 /* Clear floats */
 form.example::after {
-  content: "";
+  content: '';
   clear: both;
   display: table;
 }
 
+<<<<<<< HEAD
 .search{
   padding:20px;
   
+=======
+.search {
+  padding: 20px;
+>>>>>>> 2b2637f74592d91a2fbea5df28a4955f44c0a74f
 }
 
 //for product dropdown
-ul{
-  max-height: 300px ;
-  overflow-y: auto ;
+ul {
+  max-height: 300px;
+  overflow-y: auto;
 }

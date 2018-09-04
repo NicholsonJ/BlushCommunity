@@ -16,7 +16,12 @@ var storage = cloudinaryStorage({
   allowedFormats: ['jpg', 'png'],
   filename: function(req, file, cb) {
     cb(null, 'my-file-name');
-  }
+  },
+  transformation: [
+    {
+      angle: 0
+    }
+  ]
 });
 
 const uploadCloud = multer({ storage: storage });

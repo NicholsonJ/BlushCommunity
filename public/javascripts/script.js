@@ -14,11 +14,6 @@ function likeThis($this) {
   // event.preventDefault();
   console.log('button clicked');
   const selfie_data = $this.id;
-
-  // const user_data = $this.user;
-  // const newLike = {
-  //   _user:
-  // }
   console.log('data: ' + selfie_data);
   // console.log('user: ' + user_data);
   axios.post('http://localhost:3000/likes/new', { selfie_data: selfie_data }).then(response => {
