@@ -23,7 +23,11 @@ router.post('/editProfile', ensureLoggedIn('/auth/login'), (req, res, next) => {
 
 router.get('/profile', ensureLoggedIn('/auth/login'), (req, res, next) => {
   User.findById(req.user._id).then(userFromDb => {
-    res.render('profile/show', userFromDb);
+    Selfie.find({ _user: req.user._id })
+      .populate('_user')
+      .then(selfieFromDb => {
+        res.render('profile/show', { selfieFromDb: selfieFromDb, user: userFromDb });
+      });
   });
 });
 
