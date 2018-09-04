@@ -20,7 +20,7 @@ const productSchema = new Schema(
         'bronzer'
       ]
     },
-    productColor: [String],
+    productColor: [{ hex_value: String, colour_name: String }],
     image: String,
     website: String
   },

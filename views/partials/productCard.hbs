@@ -1,0 +1,19 @@
+<div class="col-sm mt-3">
+  <div class="card hovereffect border-0" style="width: 18rem;">
+    <img class="card-img " src={{image}} alt="Card image cap">
+    <div class="card-body overlay">
+      <h5 class="card-title">{{brand}}</h5>
+      <p class="card-text">{{name}}</p>
+      <p class="card-text">{{productType}}</p>
+      <a href={{website}}>Pick one up today!</a>
+      <button type="button" class="btn likebutton btn-sm" id={{ _id }} onclick="likeThis(this)">
+        Like
+      </button>
+      {{!--
+      <ul class="list-group list-group-flush">
+        {{#each _products}}
+        <li class="list-group-item">{{this}} {{/each}}
+      </ul> --}}
+    </div>
+  </div>
+</div>
