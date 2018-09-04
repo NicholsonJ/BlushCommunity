@@ -6316,7 +6316,11 @@ a.text-dark:hover, a.text-dark:focus {
   font-family: 'Kaushan Script', cursive; }
 
 body {
-  font-family: 'Kaushan Script', cursive; }
+  font-family: 'Kaushan Script', cursive;
+  background-image: url(../images/brick.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
 
 a {
   color: black; }
@@ -6610,5 +6614,14 @@ c {
     margin: -45px 10px 0px 25px;
     z-index: 9;
     width: 20%; } }
+
+/* Style the submit button*/
+input[type=submit] {
+  background-color: #dda094;
+  color: black;
+  padding: 12px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer; }
 
 /*# sourceMappingURL=style.css.map */
