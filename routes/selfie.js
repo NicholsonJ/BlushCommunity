@@ -3,6 +3,7 @@ const router = express.Router();
 const ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
 const User = require('../models/User');
 const Selfie = require('../models/Selfie');
+const Likes = require('../models/Likes');
 const uploadCloud = require('../config/cloudinary.js');
 
 router.get('/selfie', ensureLoggedIn('/auth/login'), (req, res, next) => {
@@ -25,7 +26,7 @@ router.post(
     };
     console.log(selfieInfo);
     Selfie.create(selfieInfo).then(selfieFromDb => {
-      console.log(selfieFromDb.title + ' was added');
+      console.log('like was created');
     });
     res.redirect('/feed');
   }
@@ -33,6 +34,15 @@ router.post(
 
 router.post('/likes/new', (req, res) => {
   console.log('WE ARE HERE!!!');
+  const selfieData = req.body.key;
+  const userData = req.user._id;
+  const likeToCreate = {
+    _user: userData,
+    _selfie: selfieData
+  };
+  Likes.create(likeToCreate).then(likeFromDb => {
+    console.log(likeFromDb.length + ' likes were created');
+  });
   res.send('New like created!!');
 });
 

@@ -15,5 +15,5 @@ const likesSchema = new Schema(
   }
 );
 
-const Likes = mongoose.model('ProductUser', likesSchema);
+const Likes = mongoose.model('Likes', likesSchema);
 module.exports = Likes;
