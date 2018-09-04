@@ -10,16 +10,20 @@ const uploadCloud = require('../config/cloudinary.js');
 router.get('/', (req, res, next) => {
   res.render('index');
 });
-
 router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
+  console.log(req.query,"hello")
   let filter = {}
-  if (req.query.brand) {
+  if (req.query.brand && req.query.productType) {
+  
     filter.brand = req.query.brand
+    filter.productType = req.query.productType
+    console.log(productType)
   }
 
-  if (req.query.productType) {
-    filter.productType = req.query.productType
-  }
+  // if (req.query.productType) {
+  //   console.log("hello world")
+  //   filter.productType = req.query.productType
+  // }
 
   Promise.all([
     Selfie.find().populate('_user'),
