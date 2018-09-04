@@ -19,7 +19,7 @@ a {
 }
 
 h1 {
-  font-family: Poiret One;
+  font-family:'Kaushan Script', cursive ;
   //font-weight:bold;
 }
 h2,
@@ -91,6 +91,11 @@ footer {
   list-style-type: none;
   text-align: end;
 }
+ul{
+    max-height: 300px ;
+    overflow-y: auto ;
+}
+
 
 .footer-separator--thin {
   height: 0.0625 rem;
@@ -371,4 +376,42 @@ input[type=submit] {
 .selfie {
   padding: 30px;
   background-color: #dda094;
+}
+//search-form
+// form.example input[type=text] {
+//   padding: 10px;
+//   font-size: 17px;
+//   border: 1px solid grey;
+//   float: left;
+//   width: 80%;
+//   background: #f1f1f1;
+//   border-radius: 20px;
+// }
+
+/* Style the submit button */
+form.example button {
+  float: left;
+  width: 10%;
+  padding: 10px;
+  background:#dda094;
+  color:black;
+  font-size: 17px;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+  border-radius:20px;
+}
+
+form.example button:hover {
+  background:#dda094;
+}
+
+/* Clear floats */
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.search{
+  padding:20px;
 }

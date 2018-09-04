@@ -1,5 +1,99 @@
 <div class="container">
+<div class="container">
+  <section class="col-xs-12 box filter">
+    <p class="text-center">Search your favorite product</p>
+    {{!-- <img class="img-responsive center-block arrow" src="http://psdwizard.net/preview/fusewave/01/assets/images/arrow.png" alt="Arrow"> --}}
+    <div class="filter-block">
+      <form class="form-horizontal" action="">
+        <div class="productType">
+          
+          <h3>ProductType</h3>
+          <div class="checkbox">
+          <label><input type="checkbox" rel="category-one"/>foundation</label>
+          <label><input type="checkbox" rel="category-two"/>blush</label>
+          <label><input type="checkbox" rel="category-three"/>lipstick</label>
+          <label><input type="checkbox" rel="category-four"/>lip_liner</label>
+          <label><input type="checkbox" rel="category-five"/>eyeliner</label>
+          <label><input type="checkbox" rel="category-five"/>nail_polish</label>
+          <label><input type="checkbox" rel="category-five"/>mascara</label>
+          <label><input type="checkbox" rel="category-five"/>eyebrow</label>
+          <label><input type="checkbox" rel="category-five"/>bronzer</label>
+          </div>
 
+  <div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Brand</button>
+    <span class="caret"></span>
+    <ul class="dropdown-menu">
+    <li><a href="#">almay</a></li>
+    <li><a href="#">alva</a></li>
+    <li><a href="#">anna sui</a></li>
+    <li><a href="#">annabelle</a></li>
+    <li><a href="#">benefit</a></li>
+    <li><a href="#">boosh</a></li>
+    <li><a href="#">burt's bees</a></li>
+    <li><a href="#">butter london</a></li>
+    <li><a href="#">c'est moi</a></li>
+    <li><a href="#">cargo cosmetics</a></li>
+    <li><a href="#">china glaze</a></li>
+    <li><a href="#">clinique</a></li>
+    <li><a href="#">coastal classic creation</a></li>
+    <li><a href="#">colourpop</a></li>
+    <li><a href="#">covergirl</a></li>
+    <li><a href="#">dalish</a></li>
+    <li><a href="#">deciem</a></li>
+    <li><a href="#">dior</a></li>
+    <li><a href="#">dr. hauschka</a></li>
+    <li><a href="#">e.l.f.</a></li>
+    <li><a href="#">essie</a></li>
+    <li><a href="#">fenty</a></li>
+    <li><a href="#">glossier</a></li>
+    <li><a href="#">green people</a></li>
+    <li><a href="#">iman</a></li>
+    <li><a href="#">l'oreal</a></li>
+    <li><a href="#">lotus cosmetics usa</a></li>
+    <li><a href="#">marcelle</a></li>
+    <li><a href="#">marienatie</a></li>
+    <li><a href="#">maybelline</a></li>
+    <li><a href="#">milani</a></li>
+    <li><a href="#">mineral fusion</a></li>
+    <li><a href="#">misa</a></li>
+    <li><a href="#">mistura</a></li>
+    <li><a href="#">moov</a></li>
+    <li><a href="#">nudus</a></li>
+    <li><a href="#">nyx</a></li>
+    <li><a href="#">orly</a></li>
+    <li><a href="#">pacifica</a></li>
+    <li><a href="#">penny lane organics</a></li>
+    <li><a href="#">physicians formula</a></li>
+    <li><a href="#">piggy paint</a></li>
+    <li><a href="#">pure anada</a></li>
+    <li><a href="#">rejuva minerals</a></li>
+    <li><a href="#">revlon</a></li>
+    <li><a href="#">salon perfect</a></li>
+    <li><a href="#">sante</a></li>
+    <li><a href="#">sinful colours</a></li>
+    <li><a href="#">smashbox</a></li>
+    <li><a href="#">stila</a></li>
+    <li><a href="#">w3llpeople</a></li>
+    <li><a href="#">zorah</a></li>
+    <li><a href="#">zorah biocosmetiques</a></li>
+    </ul>
+    </div>
+    {{!-- </div> --}}
+        </div>
+      </form>
+    </div>
+  </section>
+</div>
+<div class="search">
+<form class="example" action="action_page.php">
+  {{!-- <input type="text" placeholder="Products..." name="search"> --}}
+  <button type="submit"><i class="fa fa-search"></i> Search</button>
+  </div>
+</form>
+</body>
+</html>
+</div>
   <div class="row">
     {{#each selfieFromDb}} {{>selfieCard this}} {{/each}}
   </div>
