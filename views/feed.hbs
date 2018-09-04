@@ -22,7 +22,6 @@
 
   <div class="dropdown">
   <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Brand</button>
-    <span class="caret"></span>
     <ul class="dropdown-menu">
     <li><a href="#">almay</a></li>
     <li><a href="#">alva</a></li>
@@ -88,15 +87,14 @@
 <div class="search">
 <form class="example" action="action_page.php">
   {{!-- <input type="text" placeholder="Products..." name="search"> --}}
-  <button type="submit"><i class="fa fa-search"></i> Search</button>
-  </div>
-</form>
-</body>
-</html>
+<button type="submit"><i class="fa fa-search"></i> Search</button>
 </div>
+</form>
+ </body>
+ </html>
+ </div>
   <div class="row">
     {{#each selfieFromDb}} {{>selfieCard this}} {{/each}}
   </div>
 </div>
-
 <div class="mb-5"></div>

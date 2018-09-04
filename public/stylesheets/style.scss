@@ -91,11 +91,6 @@ footer {
   list-style-type: none;
   text-align: end;
 }
-ul{
-    max-height: 300px ;
-    overflow-y: auto ;
-}
-
 
 .footer-separator--thin {
   height: 0.0625 rem;
@@ -414,4 +409,10 @@ form.example::after {
 
 .search{
   padding:20px;
+}
+
+//for product dropdown
+ul{
+  max-height: 300px ;
+  overflow-y: auto ;
 }
