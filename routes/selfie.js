@@ -47,27 +47,52 @@ router.post('/like/new', (req, res) => {
   res.send('New like created!!');
 });
 
+
+// delete selfie
+
+router.post('/selfie/delete', (req, res) => {
+  //const selfieData = req.body.selfie_data;
+  //console.log('selfieData: ' + selfieData);
+  //const userData = req.user._id;
+  Selfie.findOneAndRemove({ $and: [ { _user: req.user._id}, { _id: req.body.selfie_data } ] }, (err, response) => {
+    if (err) {
+      res.send( "Cannot delete this selfie" )
+    } else {
+      res.send("Selfie deleted!")
+    }
+  })
+});
+
 //edit selfie
 
-router.get('/selfie/:selfieId', ensureLoggedIn('/auth/login'), (req, res, next) => {
-  let selfieId = req.params.selfieId;
-  Selfie.findById(selfieId)
-    .then(Selfie => {
-      res.render('editSelfie', { Selfie: Selfie });
-    })
-    .catch(err => {
-      throw err;
-    });
+router.get('/selfie/:selfieId',ensureLoggedIn('/auth/login'),(req, res, next) => {
+  let selfieId = req.params.selfieId
+  Selfie.findById(selfieId )
+  .then(selfie => {
+    res.render('editSelfie',{selfie : selfie});
+  })
+  .catch( err => { throw err } );
 });
 
 //update selfie
 
-// router.post('/:selfieId',ensureLoggedIn('/auth/login'),(req, res, next) => {
-//   let {image, title, _products,comment} = req.body;
-//   Selfie.findByIdAndUpdate( req.params.selfieId, { image, title, _products,comment } )
-//     .then( Selfie => {
-//       console.log("Edit:", Selfie);
-//       res.redirect( `/profile`);
+router.post('selfie/:selfieId',ensureLoggedIn('/auth/login'),(req, res, next) => {
+  let {image, title, _products,comment} = req.body;
+  Selfie.findByIdAndUpdate( req.params.selfieId, { image, title, _products,comment } )
+    .then( selfie => {
+      console.log("Edit:", selfie);
+      res.redirect( '/profile');
+    })
+    .catch( err => { throw err } );
+});
+
+//delete selfie 
+
+// router.get('/selfie/:selfieId/delete', (req, res, next) => {
+//   Selfie.findByIdAndRemove( req.params.selfieId )
+//     .then( () => {
+//       console.log("Selfie deleted!");
+//       res.redirect('/profile');
 //     })
 //     .catch( err => { throw err } );
 // });
