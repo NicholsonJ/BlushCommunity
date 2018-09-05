@@ -1,31 +1,30 @@
 <!-- views/auth/signup.hbs -->
 <div class="credentials">
-<h2>Signup</h2>
+  <h2>Signup</h2>
 
-<form action="/auth/signup" method="POST" id="form-container">
+  <form action="/auth/signup" method="POST" id="form-container">
 
-<label for="Username"></label>
-  <input id="username" type="username" name="username" placeholder="Username">
+    <label for="Username"></label>
+    <input id="username" type="username" name="username" placeholder="Username">
 
 
-  <label for="email"></label>
-  <input id="email" type="text" name="email" placeholder="Email">
+    <label for="email"></label>
+    <input id="email" type="text" name="email" placeholder="Email">
 
-  <label for="password"></label>
-  <input id="password" type="password" name="password" placeholder="Password">
+    <label for="password"></label>
+    <input id="password" type="password" name="password" placeholder="Password">
 
-  <br>
-  {{#if message }}
+    <br> {{#if message }}
     <div class="error-message">{{ message }}</div>
-  {{/if}}
+    {{/if}}
 
-  <br><br>
+    <br><br>
 
-  <button class="button"><span>Create Account</span></button>
+    <button class="button"><span>Create Account</span></button>
 
-  <p class="account-message">
-    Do you already have an account?
-    <a href="/auth/login">Login</a>
-  </p>
-</form>
+    <p class="account-message">
+      Do you already have an account?
+      <a href="/auth/login">Login</a>
+    </p>
+  </form>
 </div>
