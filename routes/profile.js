@@ -3,8 +3,9 @@ const router = express.Router();
 const ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
 const User = require('../models/User');
 const Selfie = require('../models/Selfie');
-const Likes = require('../models/Likes');
+const Like = require('../models/Like');
 const Product = require('../models/Product');
+const ProductUser = require('../models/ProductUser');
 const uploadCloud = require('../config/cloudinary.js');
 
 router.get('/editProfile', ensureLoggedIn('/auth/login'), (req, res, next) => {
@@ -22,20 +23,20 @@ router.post('/editProfile', ensureLoggedIn('/auth/login'), (req, res, next) => {
   });
 });
 
-router.get('/profile', ensureLoggedIn('/auth/login'), (req, res, next) => {
+router.get('/profile/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
   User.findById(req.user._id).then(userFromDb => {
-    Selfie.find({ _user: req.user._id })
+    Selfie.find({ _user: req.params._id })
       .populate('_user')
       .then(selfieFromDb => {
-        Product.find()
-          .limit(5)
-          .then(productFromDb => {
-            Likes.find({ _user: req.user._id })
-              .populate('_selfie')
-              .then(likesFromDb => {
+        Like.find({ _user: req.params._id })
+          .populate('_selfie')
+          .then(likesFromDb => {
+            ProductUser.find({ _user: req.params._id })
+              .populate('_product')
+              .then(productUserFromDb => {
                 res.render('profile/show', {
                   selfieFromDb: selfieFromDb,
-                  products: productFromDb,
+                  products: productUserFromDb,
                   user: userFromDb,
                   likes: likesFromDb
                 });

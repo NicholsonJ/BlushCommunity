@@ -1,9 +1,9 @@
 <div class="container">
   <div class="container">
     <section class="col-xs-12 box filter">
-      {{!-- <h4 class="text-center">Search your favorite product</h4> --}}
-      {{!-- <img class="img-responsive center-block arrow" src="http://psdwizard.net/preview/fusewave/01/assets/images/arrow.png"
-        alt="Arrow"> --}}
+      {{!--
+      <h4 class="text-center">Search your favorite product</h4> --}} {{!-- <img class="img-responsive center-block arrow"
+        src="http://psdwizard.net/preview/fusewave/01/assets/images/arrow.png" alt="Arrow"> --}}
       <div class="filter-block">
         <form class="form-horizontal" action="/feed" method="get">
           <div class="productType">
@@ -83,22 +83,17 @@
               </ul> --}}
             </div>
             {{!--
-          </div> --}}
-          {{!-- <button type="submit" class="search">Search</button> --}}
-        </div>
+          </div> --}} {{!-- <button type="submit" class="search">Search</button> --}}
+      </div>
       </form>
-    </div>
-  </section>
   </div>
-{{!-- </div> --}}
-
-{{#each productsFromDb}}
-<div>
-  {{this.name}} ({{this.brand}}) {{this.productType}}
+  </section>
 </div>
-{{/each}}
+<div>
+  {{#each productsFromDb}} {{this.name}} ({{this.brand}}) {{this.productType}} {{/each}}
+</div>
 <hr>
-<h1 class ="wallfie">Wallfie</h1>
+<h1 class="wallfie">Wallfie</h1>
 <div class="row">
   {{#each selfieFromDb}} {{>selfieCard this}} {{/each}}
 </div>

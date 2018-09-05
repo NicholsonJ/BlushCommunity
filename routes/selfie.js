@@ -3,7 +3,7 @@ const router = express.Router();
 const ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
 const User = require('../models/User');
 const Selfie = require('../models/Selfie');
-const Likes = require('../models/Likes');
+const Like = require('../models/Like');
 const uploadCloud = require('../config/cloudinary.js');
 
 router.get('/selfie', ensureLoggedIn('/auth/login'), (req, res, next) => {
@@ -32,7 +32,7 @@ router.post(
   }
 );
 
-router.post('/likes/new', (req, res) => {
+router.post('/like/new', (req, res) => {
   const selfieData = req.body.selfie_data;
 
   console.log('selfieData: ' + selfieData);
@@ -41,25 +41,25 @@ router.post('/likes/new', (req, res) => {
     _user: userData,
     _selfie: selfieData
   };
-  Likes.create(likeToCreate).then(likeFromDb => {
+  Like.create(likeToCreate).then(likeFromDb => {
     console.log(likeFromDb.length + ' likes were created');
   });
   res.send('New like created!!');
 });
 
-
-
 //edit selfie
 
-router.get('/selfie/:selfieId',ensureLoggedIn('/auth/login'),(req, res, next) => {
-  let selfieId = req.params.selfieId
-  Selfie.findById(selfieId )
-  .then(Selfie => {
-    res.render('editSelfie',{Selfie : Selfie});
-  })
-  .catch( err => { throw err } );
+router.get('/selfie/:selfieId', ensureLoggedIn('/auth/login'), (req, res, next) => {
+  let selfieId = req.params.selfieId;
+  Selfie.findById(selfieId)
+    .then(Selfie => {
+      res.render('editSelfie', { Selfie: Selfie });
+    })
+    .catch(err => {
+      throw err;
+    });
 });
- 
+
 //update selfie
 
 // router.post('/:selfieId',ensureLoggedIn('/auth/login'),(req, res, next) => {

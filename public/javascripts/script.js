@@ -14,9 +14,10 @@ function likeThis($this) {
   // event.preventDefault();
   console.log('button clicked');
   const selfie_data = $this.id;
+  // $this.parent().css('background-color: red');
   console.log('data: ' + selfie_data);
   // console.log('user: ' + user_data);
-  axios.post('http://localhost:3000/likes/new', { selfie_data: selfie_data }).then(response => {
+  axios.post('/like/new', { selfie_data: selfie_data }).then(response => {
     console.log(response);
   });
 }
@@ -27,7 +28,7 @@ function addToMyCollection($this) {
   const addProduct = $this.id;
   console.log('data: ' + addProduct);
   // console.log('user: ' + user_data);
-  axios.post('http://localhost:3000/collection/new', { addProduct: addProduct }).then(response => {
+  axios.post('/collection/new', { addProduct: addProduct }).then(response => {
     console.log(response);
   });
 }
