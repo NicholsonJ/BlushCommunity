@@ -6,12 +6,7 @@ document.addEventListener(
   false
 );
 
-// $('#like').click(function() {
-//   console.log('I LIKED THIS');
-// });
-
 function likeThis($this) {
-  // event.preventDefault();
   console.log('button clicked');
   const selfie_data = $this.id;
   // $this.parent().css('background-color: red');
@@ -23,7 +18,6 @@ function likeThis($this) {
 }
 
 function addToMyCollection($this) {
-  // event.preventDefault();
   console.log('button clicked');
   const addProduct = $this.id;
   console.log('data: ' + addProduct);
