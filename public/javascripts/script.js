@@ -33,9 +33,11 @@ function addToMyCollection($this) {
   });
 }
 
-// function delete(selfie) {
-//   const selfie_data = $this.id;
-//   <button class="delete" data-id="${selfie_data}">Delete</button>
-//    axios.post('http://localhost:3000/likes/new', { selfie_data: selfie_data }).then(response => {
-   
+
+// function delete($this) {
+// console.log('delete button clicked')
+// const selfie_data = $this.id;
+// axios.post('/delete', { selfie_data: selfie_data }).then(response => {
+//   console.log(response);
 // });
+// }
