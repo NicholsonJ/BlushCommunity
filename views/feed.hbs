@@ -89,8 +89,8 @@
   </div>
   </section>
 </div>
-<div>
-  {{#each productsFromDb}} {{this.name}} ({{this.brand}}) {{this.productType}} {{/each}}
+<div class="row">
+  {{#each productsFromDb}} {{>productCard this}} {{/each}}
 </div>
 <hr>
 <h1 class="wallfie">Wallfie</h1>
