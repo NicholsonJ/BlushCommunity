@@ -6,9 +6,8 @@ const productUserSchema = new Schema(
     _user: { type: Schema.Types.ObjectId, ref: 'User' },
     _product: { type: Schema.Types.ObjectId, ref: 'Product' }
   },
-  
+
   {
-  
     timestamps: {
       createdAt: 'created_at',
       updatedAt: 'updated_at'

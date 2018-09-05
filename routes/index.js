@@ -3,6 +3,7 @@ const router = express.Router();
 const ensureLoggedIn = require('connect-ensure-login').ensureLoggedIn;
 const User = require('../models/User');
 const Product = require('../models/Product');
+const ProductUser = require('../models/ProductUser');
 const Selfie = require('../models/Selfie');
 const uploadCloud = require('../config/cloudinary.js');
 
@@ -64,12 +65,12 @@ router.post('/collection/new', (req, res) => {
 
   console.log('addProduct: ' + addProduct);
   const userData = req.user._id;
-  const userToCreate = {
+  const productUserToCreate = {
     _user: userData,
-    _selfie: addProduct
+    _product: addProduct
   };
-  ProductUser.create(userToCreate).then(userFromDb => {
-    console.log(userFromDb.length + ' likes were created');
+  ProductUser.create(productUserToCreate).then(productUserFromDb => {
+    console.log(productUserFromDb.length + ' products were created');
   });
   res.send('New user created!!');
 });

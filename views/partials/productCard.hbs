@@ -2,10 +2,12 @@
   <div class="card hovereffect border-0" style="width: 18rem;">
     <img class="card-img " src={{image}} alt="Card image cap">
     <div class="card-body overlay">
-      <h5 class="card-title">{{brand}}</h5>
-      <p class="card-text">{{name}}</p>
-      <p class="card-text">{{productType}}</p>
-      <a href={{website}}>Pick one up today!</a>
+      <h5>
+        <a class="card-title" href={{website}}>{{brand}}</a>
+      </h5>
+      <p class="card-text">
+        {{name}} {{productType}}
+      </p>
       <button type="button" class="btn likebutton btn-sm" id={{ _id }} onclick="addToMyCollection(this)">
         Add this to my makeup bag!
       </button>
