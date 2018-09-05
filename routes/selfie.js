@@ -47,29 +47,38 @@ router.post('/likes/new', (req, res) => {
   res.send('New like created!!');
 });
 
-
-
 //edit selfie
 
 router.get('/selfie/:selfieId',ensureLoggedIn('/auth/login'),(req, res, next) => {
   let selfieId = req.params.selfieId
   Selfie.findById(selfieId )
-  .then(Selfie => {
-    res.render('editSelfie',{Selfie : Selfie});
+  .then(selfie => {
+    res.render('editSelfie',{selfie : selfie});
   })
   .catch( err => { throw err } );
 });
  
 //update selfie
 
-// router.post('/:selfieId',ensureLoggedIn('/auth/login'),(req, res, next) => {
-//   let {image, title, _products,comment} = req.body;
-//   Selfie.findByIdAndUpdate( req.params.selfieId, { image, title, _products,comment } )
-//     .then( Selfie => {
-//       console.log("Edit:", Selfie);
-//       res.redirect( `/profile`);
-//     })
-//     .catch( err => { throw err } );
-// });
+router.post('selfie/:selfieId',ensureLoggedIn('/auth/login'),(req, res, next) => {
+  let {image, title, _products,comment} = req.body;
+  Selfie.findByIdAndUpdate( req.params.selfieId, { image, title, _products,comment } )
+    .then( selfie => {
+      console.log("Edit:", selfie);
+      res.redirect( '/profile');
+    })
+    .catch( err => { throw err } );
+});
+
+//delete selfie 
+
+router.get('/selfie/:selfieId/delete', (req, res, next) => {
+  Selfie.findByIdAndRemove( req.params.selfieId )
+    .then( () => {
+      console.log("Selfie deleted!");
+      res.redirect('/profile');
+    })
+    .catch( err => { throw err } );
+});
 
 module.exports = router;
