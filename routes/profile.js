@@ -24,16 +24,22 @@ router.post('/editProfile', ensureLoggedIn('/auth/login'), (req, res, next) => {
 });
 
 router.get('/profile/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
-  User.findById(req.user._id).then(userFromDb => {
-    Selfie.find({ _user: req.params._id })
+  User.findById(req.params.id).then(userFromDb => {
+    console.log('user: ', userFromDb);
+    Selfie.find({ _user: req.params.id })
       .populate('_user')
       .then(selfieFromDb => {
-        Like.find({ _user: req.params._id })
+        console.log('selfies: ', selfieFromDb);
+        Like.find({ _user: req.params.id })
           .populate('_selfie')
+          .populate('_user')
           .then(likesFromDb => {
-            ProductUser.find({ _user: req.params._id })
+            console.log('likes: ', likesFromDb);
+            ProductUser.find({ _user: req.params.id })
               .populate('_product')
+              .populate('_user')
               .then(productUserFromDb => {
+                console.log('productUserFromDb: ', productUserFromDb);
                 res.render('profile/show', {
                   selfieFromDb: selfieFromDb,
                   products: productUserFromDb,
