@@ -47,6 +47,22 @@ router.post('/like/new', (req, res) => {
   res.send('New like created!!');
 });
 
+
+// delete selfie
+
+router.post('/selfie/delete', (req, res) => {
+  //const selfieData = req.body.selfie_data;
+  //console.log('selfieData: ' + selfieData);
+  //const userData = req.user._id;
+  Selfie.findOneAndRemove({ $and: [ { _user: req.user._id}, { _id: req.body.selfie_data } ] }, (err, response) => {
+    if (err) {
+      res.send( "Cannot delete this selfie" )
+    } else {
+      res.send("Selfie deleted!")
+    }
+  })
+});
+
 //edit selfie
 
 router.get('/selfie/:selfieId',ensureLoggedIn('/auth/login'),(req, res, next) => {

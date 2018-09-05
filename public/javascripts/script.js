@@ -27,11 +27,21 @@ function addToMyCollection($this) {
   });
 }
 
-
-// function delete($this) {
-// console.log('delete button clicked')
-// const selfie_data = $this.id;
-// axios.post('/delete', { selfie_data: selfie_data }).then(response => {
-//   console.log(response);
-// });
+// function editThis($this) {
+//   console.log('edit button clicked')
+//   const selfie_data = $this.id;
+//   axios.post('/selfie/edit', { selfie_data: selfie_data }).then(response => {
+//     console.log(response);
+//   });
 // }
+
+function deleteThis($this) {
+  console.log('delete button clicked')
+  const selfie_data = $this.id;
+  axios.post('/selfie/delete', { selfie_data: selfie_data }).then(response => {
+    console.log(response);
+  });
+}
+
+
+
