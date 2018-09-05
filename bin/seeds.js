@@ -28,6 +28,7 @@ let productsToCreate = makeup.map(product => {
 Product.deleteMany().then(() => {
   Product.create(productsToCreate).then(productsFromDb => {
     console.log(productsFromDb.length + ' products were created');
+    mongoose.connection.close();
   });
 });
 
