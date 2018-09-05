@@ -9,7 +9,7 @@ document.addEventListener(
 function likeThis($this) {
   console.log('button clicked');
   const selfie_data = $this.id;
-  // $this.parent().css('background-color: red');
+  $this.style.backgroundColor = '#9933ff';
   console.log('data: ' + selfie_data);
   // console.log('user: ' + user_data);
   axios.post('/like/new', { selfie_data: selfie_data }).then(response => {

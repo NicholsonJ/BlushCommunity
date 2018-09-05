@@ -12,11 +12,12 @@ router.get('/', (req, res, next) => {
   res.render('index');
 });
 router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
-  console.log(req.query, 'hello');
   let filter = {};
   if (req.query.brand && req.query.products) {
     Promise.all([
-      Selfie.find().populate('_user'),
+      Selfie.find()
+        .sort({ created_at: -1 })
+        .populate('_user'),
       Product.find({
         $and: [{ brand: { $eq: req.query.brand } }, { productType: { $eq: req.query.products } }]
       })
@@ -26,6 +27,7 @@ router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
     });
   } else {
     Selfie.find()
+      .sort({ created_at: -1 })
       .populate('_user')
       .then(selfieFromDb => {
         res.render('feed', { selfieFromDb: selfieFromDb });
