@@ -1,14 +1,14 @@
 <div class="container">
   <div class="container">
     <section class="col-xs-12 box filter">
-      <p class="text-center">Search your favorite product</p>
+      {{!-- <h4 class="text-center">Search your favorite product</h4> --}}
       {{!-- <img class="img-responsive center-block arrow" src="http://psdwizard.net/preview/fusewave/01/assets/images/arrow.png"
         alt="Arrow"> --}}
       <div class="filter-block">
         <form class="form-horizontal" action="/feed" method="get">
           <div class="productType">
 
-            <h3>ProductType</h3>
+            <h5>Search for your favorite product here:</h5>
             <div class="radio">
               <label><input class="r" type="radio" name="products" value="foundation" />foundation</label>
               <label><input class="r" type="radio" name="products" value="blush" />blush</label>
@@ -78,30 +78,28 @@
                 <option value="w3llpeople">w3llpeople</option>
                 <option value="zorah">zorah</option>
                 <option value="zorah biocosmetiques">zorah biocosmetiques</option>
-              </select>
+              </select><button type="submit" class="search">Search</button>
               {{!-- <ul class="dropdown-menu">
               </ul> --}}
             </div>
             {{!--
           </div> --}}
-          <div class="search">
-            <button type="submit"><i class="fa fa-search"></i>Search</button>
-          </div>
+          {{!-- <button type="submit" class="search">Search</button> --}}
         </div>
       </form>
     </div>
   </section>
-</div>
-</div>
-<div class="row">
-  {{#each selfieFromDb}} {{>selfieCard this}} {{/each}}
-</div>
-</div>
-<div class="mb-5"></div>
-
+  </div>
+{{!-- </div> --}}
 
 {{#each productsFromDb}}
 <div>
   {{this.name}} ({{this.brand}}) {{this.productType}}
 </div>
 {{/each}}
+<hr>
+<h1 class ="wallfie">Wallfie</h1>
+<div class="row">
+  {{#each selfieFromDb}} {{>selfieCard this}} {{/each}}
+</div>
+<div class="mb-5"></div>

@@ -134,6 +134,7 @@ footer {
 .row {
   margin: 0px;
   margin-top: 30px;
+  
 }
 
 #about {
@@ -414,12 +415,29 @@ form.example::after {
   display: table;
 }
 
-.search {
-  padding: 20px;
-}
+
 
 //for product dropdown
 ul {
   max-height: 300px;
   overflow-y: auto;
+}
+
+.search {
+
+  border-radius: 4px;
+  background-color: #dda094;
+  border: none;
+  color: black;
+  text-align: center;
+  font-size: 15px;
+  padding: 5px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.wallfie{
+  text-align: center;
 }

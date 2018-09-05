@@ -22,7 +22,6 @@ router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
         console.log( productsFromDb )
         res.render('feed', { selfieFromDb: selfieFromDb, productsFromDb: productsFromDb });
       });
-    
   
     // filter.brand = req.query.brand
     // filter.productType = req.query.productType
@@ -33,12 +32,6 @@ router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
       res.render('feed', { selfieFromDb: selfieFromDb });
     });
   }
-
-  // if (req.query.productType) {
-  //   console.log("hello world")
-  //   filter.productType = req.query.productType
-  // }
-
 });
 
 module.exports = router;
