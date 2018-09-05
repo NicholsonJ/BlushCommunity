@@ -1,0 +1,36 @@
+<h2>Update your selfie : {{user.username}}</h2>
+
+
+<form action="/{{this._id}}" method="post" id="selfie-form" enctype="multipart/form-data">
+
+  <div class="form-group">
+    <label class="col-lg-3 col-form-label form-control-label" for="text">Your Selfie:</label>
+    <div class="col-lg-9">
+      <input class="form-control" type="file" name="selfPic" accept="image/*">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-lg-3 col-form-label form-control-label" for="text">Give us a Title:</label>
+    <div class="col-lg-9">
+      <input class="form-control" type="text" name="title" placeholder="Check out my look!" value={{title}}>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-lg-3 col-form-label form-control-label" for="text">What products did you use?</label>
+    <div class="col-lg-9">
+      <input class="form-control" type="text" name="products" placeholder="Maybe it's..." value={{products}}>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <label class="col-lg-3 col-form-label form-control-label" for="description">Tell us about it!</label>
+    <div class="col-lg-9">
+      <textarea class="form-control" rows="2" cols="50" name="comment" placeholder="You've got 150 characters to tell us how you did it!" value={{comment}}></textarea>
+    </div>
+  </div>
+
+  <input type="submit" value="Submit">
+</form>
