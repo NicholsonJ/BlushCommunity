@@ -79,7 +79,7 @@ require('./passport')(app);
 
 app.use((req, res, next) => {
   res.locals.isConnected = req.isAuthenticated();
-
+  res.locals.currentUser = req.user;
   //res.locals.isAdmin = req.user && req.user.role === 'ADMIN'
 
   next();
