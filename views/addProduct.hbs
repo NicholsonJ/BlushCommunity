@@ -1,0 +1,56 @@
+<div class="container justify-content-md-center mb-4 mt-4">
+  <form action="/addProduct" method="post" id="selfie-form" enctype="multipart/form-data" class="container justify-content-md-center mt-4">
+    <div class="conatiner justify-content-md-center mt-4 mb-4">
+      <h2>New Product?</h2>
+      <div class="form-group col-md-auto">
+        <label class="col-lg-3 col-form-label form-control-label" for="text">Pic of the product:</label>
+        <div class="col-lg-9">
+          <input class="" type="file" name="productPic" accept="image/*">
+        </div>
+      </div>
+
+      <div class="form-group col-md-auto">
+        <label class="col-lg-3 col-form-label justify-text-md-center form-control-label" for="text">Brand:</label>
+        <div class="col-lg-9">
+          <input class="form-control justify-text-md-center" type="text" name="brand" placeholder="Check out my look!">
+        </div>
+      </div>
+
+      <div class="form-group col-md-auto">
+        <label class="col-lg-3 col-form-label justify-text-md-center form-control-label" for="text">Name:</label>
+        <div class="col-lg-9">
+          <input class="form-control justify-text-md-center" type="text" name="name" placeholder="Check out my look!">
+        </div>
+      </div>
+
+      <div class="radio">
+        <label><input class="r" type="radio" name="products" value="foundation" />foundation</label>
+        <label><input class="r" type="radio" name="products" value="blush" />blush</label>
+        <label><input class="r" type='radio' name="products" value="lipstick" />lipstick</label>
+        <label><input class="r" type="radio" name="products" value="lip_liner" />lip_liner</label>
+        <label><input class="r" type="radio" name="products" value="eyeliner" />eyeliner</label>
+        <label><input class="r" type="radio" name="products" value="nail_polish" />nail_polish</label>
+        <label><input class="r" type="radio" name="products" value="mascara" />mascara</label>
+        <label><input class="r" type="radio" name="products" value="eyebrow" />eyebrow</label>
+        <label><input class="r" type="radio" name="products" value="bronzer" />bronzer</label>
+      </div>
+
+      <div class="form-group col-md-auto">
+        <label class="col-lg-3 col-form-label justify-text-md-center form-control-label" for="text">Product Color:</label>
+        <div class="col-lg-9">
+          <input class="form-control justify-text-md-center" type="text" name="productColor" placeholder="Check out my look!">
+        </div>
+      </div>
+
+      <div class="form-group col-md-auto">
+        <label class="col-lg-3 col-form-label justify-text-md-center form-control-label" for="text">Where can we get some?</label>
+        <div class="col-lg-9">
+          <input class="form-control justify-text-md-center" type="text" name="website" placeholder="Check out my look!">
+        </div>
+      </div>
+
+      <input class="selfieSubmit" type="submit" value="Submit">
+    </div>
+  </form>
+  <div class="mb-4 container"></div>
+</div>
