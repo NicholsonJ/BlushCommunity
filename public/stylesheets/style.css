@@ -6677,4 +6677,16 @@ ul {
 .wallfie {
   text-align: center; }
 
+.selfieForm {
+  background-image: url("../images/selfieFormImg.jpg");
+  background-size: cover; }
+
+.selfieForm label {
+  text-align: center;
+  justify-content: center; }
+
+.selfieSubmit {
+  text-align: center;
+  justify-content: center; }
+
 /*# sourceMappingURL=style.css.map */

@@ -22,7 +22,8 @@ const productSchema = new Schema(
     },
     productColor: [{ hex_value: String, colour_name: String }],
     image: String,
-    website: String
+    website: String,
+    _user: { type: Schema.Types.ObjectId, ref: 'User' }
   },
   {
     timestamps: {
