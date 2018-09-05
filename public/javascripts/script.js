@@ -20,3 +20,14 @@ function likeThis($this) {
     console.log(response);
   });
 }
+
+function addToMyCollection($this) {
+  // event.preventDefault();
+  console.log('button clicked');
+  const addProduct = $this.id;
+  console.log('data: ' + addProduct);
+  // console.log('user: ' + user_data);
+  axios.post('http://localhost:3000/collection/new', { addProduct: addProduct }).then(response => {
+    console.log(response);
+  });
+}

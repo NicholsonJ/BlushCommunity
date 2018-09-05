@@ -23,10 +23,6 @@ router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
       console.log(productsFromDb);
       res.render('feed', { selfieFromDb: selfieFromDb, productsFromDb: productsFromDb });
     });
-
-    // filter.brand = req.query.brand
-    // filter.productType = req.query.productType
-    // console.log(productType)
   } else {
     Selfie.find()
       .populate('_user')
@@ -36,12 +32,12 @@ router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
   }
 });
 
-router.get('/addproduct', ensureLoggedIn('/auth/login'), (req, res, next) => {
-  res.render('addProduct');
+router.get('/newproduct', ensureLoggedIn('/auth/login'), (req, res, next) => {
+  res.render('newProduct');
 });
 
 router.post(
-  '/addproduct',
+  '/newproduct',
   uploadCloud.single('productPic'),
   ensureLoggedIn('/auth/login'),
   (req, res, next) => {
@@ -62,5 +58,20 @@ router.post(
     res.redirect('/feed');
   }
 );
+
+router.post('/collection/new', (req, res) => {
+  const addProduct = req.body.addProduct;
+
+  console.log('addProduct: ' + addProduct);
+  const userData = req.user._id;
+  const userToCreate = {
+    _user: userData,
+    _selfie: addProduct
+  };
+  ProductUser.create(userToCreate).then(userFromDb => {
+    console.log(userFromDb.length + ' likes were created');
+  });
+  res.send('New user created!!');
+});
 
 module.exports = router;

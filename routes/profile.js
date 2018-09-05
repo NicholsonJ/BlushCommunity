@@ -17,8 +17,7 @@ router.post('/editProfile', ensureLoggedIn('/auth/login'), (req, res, next) => {
   const updateProfile = {
     image: req.body.image
   };
-
-User.update(updateProfile).then(selfieFromDb => {
+  User.update(updateProfile).then(selfieFromDb => {
     console.log(selfieFromDb.title + ' was updated');
   });
 });
