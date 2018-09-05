@@ -36,4 +36,31 @@ router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
   }
 });
 
+router.get('/addproduct', ensureLoggedIn('/auth/login'), (req, res, next) => {
+  res.render('addProduct');
+});
+
+router.post(
+  '/addproduct',
+  uploadCloud.single('productPic'),
+  ensureLoggedIn('/auth/login'),
+  (req, res, next) => {
+    console.log('req.file', req.file);
+
+    const productInfo = {
+      brand: req.body.brand,
+      image: req.file.url,
+      name: req.body.name,
+      productColor: [{ hex_value: '000000', colour_name: req.body.productColor }],
+      website: req.body.website,
+      _user: req.user._id
+    };
+    console.log(productInfo);
+    Product.create(productInfo).then(productFromDb => {
+      console.log('product was created');
+    });
+    res.redirect('/feed');
+  }
+);
+
 module.exports = router;
