@@ -47,4 +47,29 @@ router.post('/likes/new', (req, res) => {
   res.send('New like created!!');
 });
 
+
+
+//edit selfie
+
+router.get('/selfie/:selfieId',ensureLoggedIn('/auth/login'),(req, res, next) => {
+  let selfieId = req.params.selfieId
+  Selfie.findById(selfieId )
+  .then(Selfie => {
+    res.render('editSelfie',{Selfie : Selfie});
+  })
+  .catch( err => { throw err } );
+});
+ 
+//update selfie
+
+// router.post('/:selfieId',ensureLoggedIn('/auth/login'),(req, res, next) => {
+//   let {image, title, _products,comment} = req.body;
+//   Selfie.findByIdAndUpdate( req.params.selfieId, { image, title, _products,comment } )
+//     .then( Selfie => {
+//       console.log("Edit:", Selfie);
+//       res.redirect( `/profile`);
+//     })
+//     .catch( err => { throw err } );
+// });
+
 module.exports = router;
