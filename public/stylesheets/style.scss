@@ -8,7 +8,7 @@
 
 body {
   font-family: 'Kaushan Script', cursive;
-  background-image: url(../images/bodyBackground.jpg);
+  // background-image: url(../images/bodyBackground.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -36,7 +36,7 @@ h5 {
   padding: 1% 0;
   font-size: 1.2em;
   border: 0;
-  background-color: #fcb986;
+  background-color: #0d0d0d;
 }
 
 .navbar-brand {
@@ -462,4 +462,9 @@ ul {
 
 .productCardTitle {
   font-size: 12px;
+}
+
+.jumbotronText {
+  color: #616161;
+  background-image: url('../images/brick.jpg');
 }

@@ -6317,7 +6317,6 @@ a.text-dark:hover, a.text-dark:focus {
 
 body {
   font-family: 'Kaushan Script', cursive;
-  background-image: url(../images/bodyBackground.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
@@ -6341,7 +6340,7 @@ h5 {
   padding: 1% 0;
   font-size: 1.2em;
   border: 0;
-  background-color: #fcb986; }
+  background-color: #0d0d0d; }
 
 .navbar-brand {
   min-height: 20px;
@@ -6697,5 +6696,9 @@ ul {
 
 .productCardTitle {
   font-size: 12px; }
+
+.jumbotronText {
+  color: #616161;
+  background-image: url("../images/brick.jpg"); }
 
 /*# sourceMappingURL=style.css.map */
