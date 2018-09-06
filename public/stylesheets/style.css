@@ -6313,14 +6313,15 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6; } }
 
 * {
-  font-family: 'Kaushan Script', cursive; }
+  font-family: 'Josefin Sans', sans-serif; }
 
 body {
   font-family: 'Kaushan Script', cursive;
-  background-image: url(../images/brick.jpg);
+  background-image: url(../images/bodyBackground.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  position: relative; }
+  position: relative;
+  background-attachment: fixed; }
 
 a {
   color: black; }
@@ -6340,7 +6341,7 @@ h5 {
   padding: 1% 0;
   font-size: 1.2em;
   border: 0;
-  background-color: #dda094; }
+  background-color: #fcb986; }
 
 .navbar-brand {
   min-height: 20px;
@@ -6418,15 +6419,14 @@ footer {
 #product {
   margin: 0px;
   padding: 30px;
-  background-color: #dda094; }
+  background-color: #0b060a; }
 
 .row {
   margin: 0px;
   margin-top: 30px; }
 
 #about {
-  background-color: #dda094;
-  color: black;
+  background-color: #0b060a;
   padding: 30px; }
 
 .logincontainer {
@@ -6440,9 +6440,12 @@ footer {
 .account-message {
   padding-top: 20px; }
 
+.whiteText {
+  color: #ffffff; }
+
 .button {
   border-radius: 4px;
-  background-color: #dda094;
+  background-color: #fcb986;
   border: none;
   color: black;
   text-align: center;
@@ -6475,28 +6478,20 @@ footer {
   right: 0; }
 
 .glamvibe-pic1 {
-  background-image: url(../images/pic1.jpg);
+  background-image: url(../images/pic1.jpg); }
+
+.glampics {
   background-size: cover;
   background-repeat: no-repeat;
   height: 200px;
   padding-top: 50px;
-  position: relative; }
+  margin: 5px; }
 
 .glamvibe-pic2 {
-  background-image: url(../images/beautiful-birthday-blur-318379.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  padding-top: 50px;
-  position: relative; }
+  background-image: url(../images/diana-kadreva-605288-unsplash.jpg); }
 
 .glamvibe-pic3 {
-  background-image: url(../images/diana-kadreva-605288-unsplash.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-  padding-top: 50px;
-  position: relative; }
+  background-image: url(../images/pic3.jpg); }
 
 .aboutus-pic {
   background-size: cover;
@@ -6622,7 +6617,7 @@ c {
     width: 20%; } }
 
 .likebutton {
-  background-color: #dda094; }
+  background-color: #fcb986; }
 
 .deletebutton {
   background-color: black;
@@ -6631,7 +6626,7 @@ c {
 
 /* Style the submit button*/
 input[type='submit'] {
-  background-color: #dda094;
+  background-color: #fcb986;
   color: black;
   padding: 12px 12px;
   border: none;
@@ -6640,14 +6635,14 @@ input[type='submit'] {
 
 .selfie {
   padding: 30px;
-  background-color: #dda094; }
+  background-color: #fcb986; }
 
 /* Style the submit button */
 form.example button {
   float: left;
   width: 10%;
   padding: 10px;
-  background: #dda094;
+  background: #fcb986;
   color: black;
   font-size: 17px;
   border-left: none;
@@ -6656,7 +6651,7 @@ form.example button {
   border-radius: 20px; }
 
 form.example button:hover {
-  background: #dda094; }
+  background: #fcb986; }
 
 /* Clear floats */
 form.example::after {
@@ -6670,7 +6665,7 @@ ul {
 
 .search {
   border-radius: 4px;
-  background-color: #dda094;
+  background-color: #fcb986;
   border: none;
   color: black;
   text-align: center;
