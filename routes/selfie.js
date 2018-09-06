@@ -21,7 +21,7 @@ router.post(
       title: req.body.title,
       image: req.file.url,
       comment: req.body.comment,
-      // _products: req.body.products,
+      products: req.body.products,
       _user: req.user._id
     };
     console.log(selfieInfo);

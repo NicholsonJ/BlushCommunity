@@ -5,7 +5,8 @@ const selfieSchema = new Schema(
   {
     image: String,
     title: String,
-    _products: [{ type: Schema.Types.ObjectId, ref: 'Product' }],
+    products: String,
+    // _products: [{ type: Schema.Types.ObjectId, ref: 'Product' }],
     comment: String,
     _user: { type: Schema.Types.ObjectId, ref: 'User' }
   },
