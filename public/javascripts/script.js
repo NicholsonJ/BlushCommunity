@@ -36,12 +36,11 @@ function addToMyCollection($this) {
 // }
 
 function deleteThis($this) {
-  console.log('delete button clicked')
+  console.log('delete button clicked');
   const selfie_data = $this.id;
+  console.log('SELFIE ID: ', selfie_data);
+  $this.parentNode.parentNode.parentNode.style.display = 'none';
   axios.post('/selfie/delete', { selfie_data: selfie_data }).then(response => {
     console.log(response);
   });
 }
-
-
-
