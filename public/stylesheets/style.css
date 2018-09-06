@@ -6420,10 +6420,6 @@ footer {
   padding: 30px;
   background-color: #0b060a; }
 
-.row {
-  margin: 0px;
-  margin-top: 30px; }
-
 #about {
   background-color: #0b060a;
   padding: 30px; }
@@ -6649,6 +6645,9 @@ form.example button {
   cursor: pointer;
   border-radius: 20px; }
 
+.dropdown {
+  text-transform: capitalize; }
+
 form.example button:hover {
   background: #fcb986; }
 
@@ -6699,6 +6698,10 @@ ul {
 
 .jumbotronText {
   color: #616161;
-  background-image: url("../images/brick.jpg"); }
+  background-image: url("../images/marbleCover.jpg"); }
+
+.justify-content-around {
+  display: flex;
+  justify-content: space-around !important; }
 
 /*# sourceMappingURL=style.css.map */

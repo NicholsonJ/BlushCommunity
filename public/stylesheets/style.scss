@@ -134,8 +134,6 @@ footer {
   // background-color: #e3e3e3;
 }
 .row {
-  margin: 0px;
-  margin-top: 30px;
 }
 
 #about {
@@ -406,6 +404,10 @@ form.example button {
   border-radius: 20px;
 }
 
+.dropdown {
+  text-transform: capitalize;
+}
+
 form.example button:hover {
   background: #fcb986;
 }
@@ -417,7 +419,6 @@ form.example::after {
   display: table;
 }
 
-//for product dropdown
 ul {
   max-height: 300px;
   overflow-y: auto;
@@ -466,5 +467,10 @@ ul {
 
 .jumbotronText {
   color: #616161;
-  background-image: url('../images/brick.jpg');
+  background-image: url('../images/marbleCover.jpg');
+}
+
+.justify-content-around {
+  display: flex;
+  justify-content: space-around !important;
 }
