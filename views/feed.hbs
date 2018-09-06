@@ -1,14 +1,31 @@
+<!--Jumbotron-->
+<div class="row mb-5">
+  <div class="col-md-12">
+    <div class="card card-image">
+      <div class="jumbotronText text-center rgba-stylish-strong py-5 px-4">
+        <div class="py-5">
+          <!--Content-->
+          <h1 class="card-title pt-3 mb-5 font-bold">Welcome to our online beauty community!</h1>
+          <h3 class="card-title pt-3 mb-5 font-bold">Check out other's pictures and add your own.</h3>
+          <!--Content-->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Jumbotron-->
 <div class="container">
   <div class="container">
     <section class="col-xs-12 box filter">
-      {{!--
-      <h4 class="text-center">Search your favorite product</h4> --}} {{!-- <img class="img-responsive center-block arrow"
-        src="http://psdwizard.net/preview/fusewave/01/assets/images/arrow.png" alt="Arrow"> --}}
+
+      <h4 class="text-center">Search your favorite product</h4>
       <div class="filter-block">
         <form class="form-horizontal" action="/feed" method="get">
           <div class="productType">
 
             <h5>Search for your favorite product here:</h5>
+            <img class="img-responsive center-block arrow" src="http://psdwizard.net/preview/fusewave/01/assets/images/arrow.png" alt="Arrow">
             <div class="radio">
               <label><input class="r" type="radio" name="products" value="foundation" />foundation</label>
               <label><input class="r" type="radio" name="products" value="blush" />blush</label>
@@ -89,11 +106,12 @@
   </div>
   </section>
 </div>
+
+
+{{!--
 <div class="row">
   {{#each productsFromDb}} {{>productCard this}} {{/each}}
-</div>
-<hr>
-<h1 class="wallfie">Wallfie</h1>
+</div> --}}
 <div class="row">
   {{#each selfieFromDb}} {{>selfieCard this}} {{/each}}
 </div>
