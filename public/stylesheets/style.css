@@ -6679,8 +6679,10 @@ ul {
   text-align: center; }
 
 .selfieForm {
-  background-image: url("../images/selfieFormImg.jpg");
-  background-size: cover; }
+  background-image: url("../images/marble-wall.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
 
 .selfieForm label {
   text-align: center;
