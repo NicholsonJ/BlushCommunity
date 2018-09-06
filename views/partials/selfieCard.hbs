@@ -4,12 +4,13 @@
     <div class="card-body overlay">
       <h5 class="card-title">{{title}}</h5>
       <p class="card-text">{{comment}}</p>
+      <p class="card-text">{{_products}}</p>
       <button type="button" class="btn likebutton btn-sm" id={{ _id }} onclick="likeThis(this)">
         Like
       </button>
       {{!-- <button type="button" class="btn likebutton btn-sm" id={{ _id }} onclick="editThis(this)">
         Edit
-      </button> --}}
+      </button> --}} {{#if currentUser. = _owner}}
       <button type="button" class="btn likebutton btn-sm" id={{ _id }} onclick="deleteThis(this)">
         Delete
       </button>
