@@ -4,20 +4,15 @@
     <div class="card-body overlay">
       <h5 class="card-title">{{title}}</h5>
       <p class="card-text">{{comment}}</p>
+      {{#if isOwner}}
+      <button type="button" class="btn deletebutton btn-sm" id={{ _id }} onclick="deleteThis(this)">
+        Delete
+      </button>
+      {{else}}
       <button type="button" class="btn likebutton btn-sm" id={{ _id }} onclick="likeThis(this)">
         Like
       </button>
-      {{!-- <button type="button" class="btn likebutton btn-sm" id={{ _id }} onclick="editThis(this)">
-        Edit
-      </button> --}}
-      <button type="button" class="btn likebutton btn-sm" id={{ _id }} onclick="deleteThis(this)">
-        Delete
-      </button>
-      {{!--
-      <ul class="list-group list-group-flush">
-        {{#each _products}}
-        <li class="list-group-item">{{this}} {{/each}}
-      </ul> --}}
+      {{/if}}
     </div>
   </div>
 </div>

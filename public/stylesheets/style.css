@@ -6625,6 +6625,11 @@ c {
 .likebutton {
   background-color: #dda094; }
 
+.deletebutton {
+  background-color: black;
+  color: white;
+  text-transform: capitalize; }
+
 /* Style the submit button*/
 input[type='submit'] {
   background-color: #dda094;

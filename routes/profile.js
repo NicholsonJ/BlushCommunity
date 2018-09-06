@@ -30,6 +30,10 @@ router.get('/profile/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
       .sort({ created_at: -1 })
       .populate('_user')
       .then(selfieFromDb => {
+        let selfies = selfieFromDb.map(selfie => {
+          selfie.isOwner = true;
+          return selfie;
+        });
         console.log('selfies: ', selfieFromDb);
         Like.find({ _user: req.params.id })
           .sort({ created_at: -1 })
@@ -37,6 +41,10 @@ router.get('/profile/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
           .populate('_user')
           .then(likesFromDb => {
             console.log('likes: ', likesFromDb);
+            let likes = likesFromDb.map(like => {
+              like.isOwner = like._selfie._user._id === req.user._id;
+              return like;
+            });
             ProductUser.find({ _user: req.params.id })
               .sort({ created_at: -1 })
               .populate('_product')
@@ -44,10 +52,10 @@ router.get('/profile/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
               .then(productUserFromDb => {
                 console.log('productUserFromDb: ', productUserFromDb);
                 res.render('profile/show', {
-                  selfieFromDb: selfieFromDb,
+                  selfieFromDb: selfies,
                   products: productUserFromDb,
                   user: userFromDb,
-                  likes: likesFromDb
+                  likes
                 });
               });
           });
