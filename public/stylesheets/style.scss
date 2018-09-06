@@ -112,8 +112,9 @@ footer {
 }
 
 .header-container {
-  background-image: url(../images/background.jpg);
+  background-image: url(../images/backgroundCover.jpeg);
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
   height: 650px;
   padding-top: 50px;
@@ -143,19 +144,16 @@ footer {
 }
 
 .logincontainer {
-  position: absolute;
-  padding-top: 180px;
-  padding-right: 15px;
-  padding-left: 80px;
   margin-right: auto;
   margin-left: auto;
 }
 
 .title-text {
-  padding-top: 10px;
+  padding-top: 70px;
   padding-bottom: 10px;
-  padding-left: 90px;
-  position: absolute;
+}
+.account-message {
+  padding-top: 20px;
 }
 
 .button {
