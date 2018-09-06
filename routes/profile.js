@@ -25,7 +25,6 @@ router.post('/editProfile', ensureLoggedIn('/auth/login'), (req, res, next) => {
 
 router.get('/profile/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
   User.findById(req.params.id).then(userFromDb => {
-    console.log('user: ', userFromDb);
     Selfie.find({ _user: req.params.id })
       .sort({ created_at: -1 })
       .populate('_user')
@@ -34,13 +33,11 @@ router.get('/profile/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
           selfie.isOwner = true;
           return selfie;
         });
-        console.log('selfies: ', selfieFromDb);
         Like.find({ _user: req.params.id })
           .sort({ created_at: -1 })
           .populate('_selfie')
           .populate('_user')
           .then(likesFromDb => {
-            console.log('likes: ', likesFromDb);
             let likes = likesFromDb.map(like => {
               like.isOwner = like._selfie._user._id === req.user._id;
               return like;
@@ -50,7 +47,6 @@ router.get('/profile/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
               .populate('_product')
               .populate('_user')
               .then(productUserFromDb => {
-                console.log('productUserFromDb: ', productUserFromDb);
                 res.render('profile/show', {
                   selfieFromDb: selfies,
                   products: productUserFromDb,

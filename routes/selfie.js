@@ -26,7 +26,7 @@ router.post(
     };
     console.log(selfieInfo);
     Selfie.create(selfieInfo).then(selfieFromDb => {
-      console.log('like was created');
+      console.log('selfie was created');
     });
     res.redirect('/feed');
   }
@@ -49,16 +49,18 @@ router.post('/like/new', (req, res) => {
 
 // delete selfie
 
-router.post('/selfie/delete', (req, res) => {
+router.post('/selfie/delete', ensureLoggedIn('/auth/login'), (req, res) => {
   //const selfieData = req.body.selfie_data;
   //console.log('selfieData: ' + selfieData);
   //const userData = req.user._id;
-  Selfie.findOneAndRemove({ _id: req.body.selfie_data }, (err, response) => {
-    if (err) {
-      res.send('Cannot delete this selfie');
-    } else {
-      res.send('Selfie deleted!');
-    }
+  Like.deleteMany({ _selfie: req.body.selfie_data }).then(x => {
+    Selfie.findOneAndRemove({ _id: req.body.selfie_data }, (err, response) => {
+      if (err) {
+        res.send('Cannot delete this selfie');
+      } else {
+        res.send('Selfie deleted!');
+      }
+    });
   });
 });
 
