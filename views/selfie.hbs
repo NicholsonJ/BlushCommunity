@@ -1,39 +1,43 @@
 <div class="container justify-content-md-center selfieForm mb-4 mt-4">
   <form action="/selfie" method="post" id="selfie-form" enctype="multipart/form-data" class="container justify-content-md-center mt-4">
-    <div class="conatiner justify-content-md-center mt-4 mb-4">
+    <div class="container justify-content-md-center mt-4 mb-4 text-center">
       <h2>Let's post a new look!</h2>
       <div class="form-group col-md-auto">
         <label class="col-lg-3 col-form-label form-control-label" for="text">Your Look:</label>
-        <div class="col-lg-9">
-          <input class="" type="file" name="selfPic" accept="image/*">
+        <div  class="col-lg-6 col-centered">
+          <input type="file" name="selfPic" accept="image/*">
         </div>
       </div>
 
       <div class="form-group col-md-auto">
         <label class="col-lg-3 col-form-label justify-text-md-center form-control-label" for="text">Give us a Title:</label>
-        <div class="col-lg-9">
+        <div class="col-lg-6 col-centered">
           <input class="form-control justify-text-md-center" type="text" name="title" placeholder="Check out my look!">
         </div>
       </div>
 
-      <div class="form-grou col-md-autop">
+      <div class="form-group col-md-auto">
         <label class="col-lg-3 col-form-label justify-text-md-center form-control-label" for="text">What products did you
           use?
         </label>
-        <div class="col-lg-9">
+        <div class="col-lg-6 col-centered">
           <input class="form-control justify-text-md-center" type="text" name="products" placeholder="Maybe it's...">
         </div>
       </div>
 
 
-      <div class="form-group justify-content-md-center">
+      <div class="form-group  col-md-auto">
         <label class="col-lg-3 col-form-label form-control-label" for="description">Tell us about it!</label>
-        <div class="col-lg-9">
+        <div class="col-lg-6 col-centered">
           <textarea class="form-control" rows="2" cols="50" name="comment" placeholder="You've got 150 characters to tell us how you did it!"></textarea>
         </div>
       </div>
 
-      <input class="selfieSubmit" type="submit" value="Submit">
+<div class="col-md text-center">
+  <input class="selfieSubmit" type="submit" value="Submit">
+</div>
+
+      {{!-- <input class="selfieSubmit" type="submit" value="Submit"> --}}
     </div>
   </form>
   <div class="mb-4 container"></div>

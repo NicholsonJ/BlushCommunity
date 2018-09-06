@@ -1,14 +1,13 @@
-<div class="container">
-  <div class="container">
-    <section class="col-xs-12 box filter">
-      {{!--
-      <h4 class="text-center">Search your favorite product</h4> --}} {{!-- <img class="img-responsive center-block arrow"
-        src="http://psdwizard.net/preview/fusewave/01/assets/images/arrow.png" alt="Arrow"> --}}
+  {{!-- <div class="container"> --}}
+    <section class="col-xs-12 box filter text-center">
+      
+      <h4 class="text-center">Search your favorite product</h4> <img class="img-responsive center-block arrow"
+        src="http://psdwizard.net/preview/fusewave/01/assets/images/arrow.png" alt="Arrow">
       <div class="filter-block">
         <form class="form-horizontal" action="/mybag" method="get">
           <div class="productType">
 
-            <h5>Search for your favorite product here:</h5>
+            {{!-- <h4>Search for your favorite product here:</h4> --}}
             <div class="radio">
               <label><input class="r" type="radio" name="products" value="foundation" />Foundation</label>
               <label><input class="r" type="radio" name="products" value="blush" />Blush</label>
@@ -79,6 +78,7 @@
                 <option value="zorah">zorah</option>
                 <option value="zorah biocosmetiques">zorah biocosmetiques</option>
               </select><button type="submit" class="search">Search</button>
+              <p>Don't see your favourite product? Create your own favorites</p>
               {{!-- <ul class="dropdown-menu">
               </ul> --}}
             </div>
@@ -89,21 +89,26 @@
   </div>
   </section>
 </div>
-<p>Don't see your favourite product? Create your own favorites</p>
+{{!-- <p>Don't see your favourite product? Create your own favorites</p> --}}
 
 <hr>
 
 <div class="container text-center">
-  <h2>Search Results</h2>
+  <h2 class="boxed">Search Results</h2>
   <div class="row">
     {{#each productsFromDb }} {{>productCard this}} {{/each}}
   </div>
 </div>
 
-<div class="container text-center">
+<br>
+<br>
 
-  <h2>My makeup bag</h2>
+<div class="container text-center ">
+
+  <h2 class="boxed">My makeup bag</h2>
   <div class="row">
     {{#each products}} {{>productCard this._product}} {{/each}}
   </div>
 </div>
+
+<br>
