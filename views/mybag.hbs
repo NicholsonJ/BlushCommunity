@@ -89,22 +89,21 @@
     </div>
   </section>
 </div>
+<p>Don't see your favourite product? Create your own favorites</p>
 
 <hr>
 
 <div class="container text-center">
+  <h2>Search Results</h2>
+  <div class="row">
+  {{#each productsFromDb }} {{>productCard this}} {{/each}}
+</div>
+</div>
+
+<div class="container text-center">
+
   <h2>My makeup bag</h2>
   <div class="row">
     {{#each products}} {{>productCard this._product}} {{/each}}
   </div>
-</div>
-<div class="container selfie text-center">
-  <h2>Love these looks</h2>
-  <div class="container">
-
-    <div class="row">
-      {{#each likes}} {{>selfieCard this._selfie}} {{/each}}
-    </div>
-  </div>
-</div>
 </div>
