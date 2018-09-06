@@ -52,7 +52,7 @@ router.post(
       name: req.body.name,
       productColor: [{ hex_value: '000000', colour_name: req.body.productColor }],
       website: req.body.website,
-      _user: req.user._id
+      _user: req.user._id 
     };
     console.log(productInfo);
     Product.create(productInfo).then(productFromDb => {
@@ -79,13 +79,12 @@ router.post('/collection/new', (req, res) => {
 
 //to render more details of a product
 
-// router.get('/:productId', (req, res, next) => { 
-//   let productId = req.params.productId;
-//   Product.findById(productId)
-//   .then (moreInfo => {
-//     // console.log(lostObject)
-//   res.render('product-detail', moreInfo);
-//   })  
-// });
+router.get('/product/:productId', (req, res, next) => { 
+  let productId = req.params.productId;
+  Product.findById(productId)
+  .then (moreInfo => {
+  res.render('product-detail', moreInfo);
+  })  
+});
 
 module.exports = router;
