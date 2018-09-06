@@ -10,15 +10,15 @@
 
             <h5>Search for your favorite product here:</h5>
             <div class="radio">
-              <label><input class="r" type="radio" name="products" value="foundation" />foundation</label>
-              <label><input class="r" type="radio" name="products" value="blush" />blush</label>
-              <label><input class="r" type='radio' name="products" value="lipstick" />lipstick</label>
-              <label><input class="r" type="radio" name="products" value="lip_liner" />lip_liner</label>
-              <label><input class="r" type="radio" name="products" value="eyeliner" />eyeliner</label>
-              <label><input class="r" type="radio" name="products" value="nail_polish" />nail_polish</label>
-              <label><input class="r" type="radio" name="products" value="mascara" />mascara</label>
-              <label><input class="r" type="radio" name="products" value="eyebrow" />eyebrow</label>
-              <label><input class="r" type="radio" name="products" value="bronzer" />bronzer</label>
+              <label><input class="r" type="radio" name="products" value="foundation" />Foundation</label>
+              <label><input class="r" type="radio" name="products" value="blush" />Blush</label>
+              <label><input class="r" type='radio' name="products" value="lipstick" />Lipstick</label>
+              <label><input class="r" type="radio" name="products" value="lip_liner" />Lip liner</label>
+              <label><input class="r" type="radio" name="products" value="eyeliner" />Eyeliner</label>
+              <label><input class="r" type="radio" name="products" value="nail_polish" />Nail polish</label>
+              <label><input class="r" type="radio" name="products" value="mascara" />Mascara</label>
+              <label><input class="r" type="radio" name="products" value="eyebrow" />Eyebrow</label>
+              <label><input class="r" type="radio" name="products" value="bronzer" />Bronzer</label>
             </div>
 
             <div class="dropdown">
@@ -84,9 +84,9 @@
             </div>
             {{!--
           </div> --}} {{!-- <button type="submit" class="search">Search</button> --}}
-        </div>
+      </div>
       </form>
-    </div>
+  </div>
   </section>
 </div>
 <p>Don't see your favourite product? Create your own favorites</p>
@@ -96,8 +96,8 @@
 <div class="container text-center">
   <h2>Search Results</h2>
   <div class="row">
-  {{#each productsFromDb }} {{>productCard this}} {{/each}}
-</div>
+    {{#each productsFromDb }} {{>productCard this}} {{/each}}
+  </div>
 </div>
 
 <div class="container text-center">
