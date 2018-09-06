@@ -9,7 +9,7 @@ document.addEventListener(
 function likeThis($this) {
   console.log('button clicked');
   const selfie_data = $this.id;
-  // $this.parent().css('background-color: red');
+  $this.style.backgroundColor = '#9933ff';
   console.log('data: ' + selfie_data);
   // console.log('user: ' + user_data);
   axios.post('/like/new', { selfie_data: selfie_data }).then(response => {
@@ -36,13 +36,11 @@ function addToMyCollection($this) {
 // }
 
 function deleteThis($this) {
-  console.log('delete button clicked')
+  console.log('delete button clicked');
   const selfie_data = $this.id;
-  //$this.parents(style.display = 'none');
+  console.log('SELFIE ID: ', selfie_data);
+  $this.parentNode.parentNode.parentNode.style.display = 'none';
   axios.post('/selfie/delete', { selfie_data: selfie_data }).then(response => {
     console.log(response);
   });
 }
-
-
-

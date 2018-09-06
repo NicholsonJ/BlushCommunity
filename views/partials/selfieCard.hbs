@@ -1,5 +1,5 @@
 <div class="col-sm mt-3">
-  <div class="card hovereffect border-0" style="width: 18rem;">
+  <div class="card hovereffect border-0" style="width: 20rem; min-height: 20rem; border: 10px solid black;">
     <img class="card-img" src={{image}} alt="Card image cap">
     <div class="card-body overlay">
       <h5 class="card-title">{{title}}</h5>
@@ -7,10 +7,10 @@
       <button type="button" class="btn likebutton btn-sm" id={{ _id }} onclick="likeThis(this)">
         Like
       </button>
-       <button type="button" class="btn likebutton btn-sm" id={{ _id }} onclick="editThis(this)">
+      {{!-- <button type="button" class="btn likebutton btn-sm" id={{ _id }} onclick="editThis(this)">
         Edit
-      </button>
-       <button type="button" class="btn likebutton btn-sm" id={{ _id }} onclick="deleteThis(this)">
+      </button> --}}
+      <button type="button" class="btn likebutton btn-sm" id={{ _id }} onclick="deleteThis(this)">
         Delete
       </button>
       {{!--

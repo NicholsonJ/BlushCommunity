@@ -27,15 +27,18 @@ router.get('/profile/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
   User.findById(req.params.id).then(userFromDb => {
     console.log('user: ', userFromDb);
     Selfie.find({ _user: req.params.id })
+      .sort({ created_at: -1 })
       .populate('_user')
       .then(selfieFromDb => {
         console.log('selfies: ', selfieFromDb);
         Like.find({ _user: req.params.id })
+          .sort({ created_at: -1 })
           .populate('_selfie')
           .populate('_user')
           .then(likesFromDb => {
             console.log('likes: ', likesFromDb);
             ProductUser.find({ _user: req.params.id })
+              .sort({ created_at: -1 })
               .populate('_product')
               .populate('_user')
               .then(productUserFromDb => {
