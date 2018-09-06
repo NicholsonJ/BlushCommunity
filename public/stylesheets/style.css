@@ -6562,34 +6562,35 @@ c {
   filter: brightness(0.6);
   -webkit-filter: brightness(0.6); }
 
-.hovereffect h5 {
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
-  border-radius: 2px;
-  font-size: 17px;
-  background-color: #fff;
-  color: #616161;
-  padding: 0.5em 0;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0); }
-
 .hovereffect a,
 .hovereffect p {
   color: #fff;
   background-color: #616161;
   border-radius: 2px;
   padding: 1em 0;
+  margin: 5px 0;
   opacity: 0;
   filter: alpha(opacity=0);
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0); }
+
+.hovereffect h5 {
+  text-align: center;
+  position: relative;
+  border-radius: 2px;
+  font-size: 17px;
+  background-color: #fff;
+  color: #616161;
+  padding: 1em 0;
+  margin: 5px 0;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0); }
 
 .hovereffect:hover a,
 .hovereffect:hover p,
@@ -6700,5 +6701,8 @@ ul {
 .product-container {
   width: 500px;
   margin: 0 auto; }
+
+.productCardTitle {
+  font-size: 12px; }
 
 /*# sourceMappingURL=style.css.map */

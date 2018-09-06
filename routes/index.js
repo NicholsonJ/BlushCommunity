@@ -22,11 +22,11 @@ router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
         $and: [{ brand: { $eq: req.query.brand } }, { productType: { $eq: req.query.products } }]
       })
     ]).then(([selfieFromDb, productsFromDb]) => {
-      let selfies = function(selfieFromDb) {
-        if (selfie._user._id === req.user._id) return (selfie.isOwner = true);
-      };
+      // let selfies = function(selfieFromDb) {
+      //   if (selfie._user._id === req.user._id) return (selfie.isOwner = true);
+      // };
       console.log(productsFromDb);
-      res.render('feed', { selfieFromDb: selfies, productsFromDb: productsFromDb });
+      res.render('feed', { selfieFromDb: selfieFromDb, productsFromDb: productsFromDb });
     });
   } else {
     Selfie.find()
