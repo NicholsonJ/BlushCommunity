@@ -38,6 +38,7 @@ function addToMyCollection($this) {
 function deleteThis($this) {
   console.log('delete button clicked')
   const selfie_data = $this.id;
+  //$this.parents(style.display = 'none');
   axios.post('/selfie/delete', { selfie_data: selfie_data }).then(response => {
     console.log(response);
   });

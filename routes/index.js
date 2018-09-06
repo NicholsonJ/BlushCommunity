@@ -75,4 +75,15 @@ router.post('/collection/new', (req, res) => {
   res.send('New user created!!');
 });
 
+//to render more details of a product
+
+router.get('/:productId', (req, res, next) => { 
+  let productId = req.params.productId;
+  Product.findById(productId)
+  .then (moreInfo => {
+    // console.log(lostObject)
+  res.render('product-detail', moreInfo);
+  })  
+});
+
 module.exports = router;
