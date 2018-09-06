@@ -22,8 +22,11 @@ router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
         $and: [{ brand: { $eq: req.query.brand } }, { productType: { $eq: req.query.products } }]
       })
     ]).then(([selfieFromDb, productsFromDb]) => {
+      let selfies = function(selfieFromDb) {
+        if (selfie._user._id === req.user._id) return (selfie.isOwner = true);
+      };
       console.log(productsFromDb);
-      res.render('feed', { selfieFromDb: selfieFromDb, productsFromDb: productsFromDb });
+      res.render('feed', { selfieFromDb: selfies, productsFromDb: productsFromDb });
     });
   } else {
     Selfie.find()
@@ -62,7 +65,7 @@ router.post(
   }
 );
 
-router.post('/collection/new', (req, res) => {
+router.post('/collection/new', ensureLoggedIn('/auth/login'), (req, res) => {
   const addProduct = req.body.addProduct;
 
   console.log('addProduct: ' + addProduct);
@@ -79,13 +82,13 @@ router.post('/collection/new', (req, res) => {
 
 //to render more details of a product
 
-// router.get('/:productId', (req, res, next) => { 
+// router.get('/:productId', (req, res, next) => {
 //   let productId = req.params.productId;
 //   Product.findById(productId)
 //   .then (moreInfo => {
 //     // console.log(lostObject)
 //   res.render('product-detail', moreInfo);
-//   })  
+//   })
 // });
 
 module.exports = router;
