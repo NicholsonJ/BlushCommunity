@@ -13,9 +13,14 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo')(session);
 const flash = require('connect-flash');
 
+// mongoose
+//   // .connect(
+//   //   'mongodb://localhost/makeup',
+//   //   { useNewUrlParser: true }
+//   // )
 mongoose
   .connect(
-    'mongodb://localhost/makeup',
+    process.env.MONGODB_URI,
     { useNewUrlParser: true }
   )
   .then(x => {
