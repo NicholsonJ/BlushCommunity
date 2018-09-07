@@ -24,7 +24,6 @@ router.post(
       products: req.body.products,
       _user: req.user._id
     };
-    console.log(selfieInfo);
     Selfie.create(selfieInfo).then(selfieFromDb => {
       console.log('selfie was created');
     });
@@ -101,6 +100,5 @@ router.post('selfie/:selfieId', ensureLoggedIn('/auth/login'), (req, res, next) 
 //     })
 //     .catch( err => { throw err } );
 // });
-
 
 module.exports = router;

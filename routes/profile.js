@@ -12,25 +12,33 @@ router.get('/profile/:id/edit', ensureLoggedIn('/auth/login'), (req, res, next) 
   User.findById(req.user._id)
     .then(userFromDb => {
       res.render('profile/editProfile', userFromDb);
+      console.log('user: ', req.user._id);
     })
     .catch(err => {
       throw err;
     });
 });
 
-router.post('/profile/:id/edit', ensureLoggedIn('/auth/login'), (req, res, next) => {
-  const updateProfile = {
-    image: req.body.image
-  };
-  User.findByIdAndUpdate(req.params.id, updateProfile)
-    .then(selfieFromDb => {
-      console.log(selfieFromDb.title + ' was updated');
-      res.redirect(`/profile`);
-    })
-    .catch(err => {
-      throw err;
-    });
-});
+router.post(
+  '/profile/:id/edit',
+  uploadCloud.single('newProfilePic'),
+  ensureLoggedIn('/auth/login'),
+  (req, res, next) => {
+    console.log('UPDATE CLOUD', uploadCloud.single);
+    console.log('req.file', req.file);
+    const updateProfile = {
+      image: req.file.url
+    };
+    User.findByIdAndUpdate(req.user._id, updateProfile)
+      .then(profileFromDb => {
+        console.log(profileFromDb.title + ' was updated');
+        res.redirect(`/feed`);
+      })
+      .catch(err => {
+        throw err;
+      });
+  }
+);
 
 router.get('/profile/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
   User.findById(req.params.id).then(userFromDb => {
