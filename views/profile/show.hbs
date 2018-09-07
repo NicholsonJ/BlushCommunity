@@ -4,8 +4,8 @@
     <img align="left" class="fb-image-profile thumbnail" src={{user.image}} alt="This is your profile pic!"> {{!-- <a href="/profile/{{this._id}}/edit"
       class="btn btn-success">Edit</a> --}}
     <div class="fb-image-text">
-      <h1>{{user.username}}</h1>
-      <p>Girls just wanna have fun.</p>
+      <h1 class="cursive">{{user.username}}</h1>
+      <p>Style through community.</p>
     </div>
 
   </div>
@@ -17,7 +17,7 @@
   <h2 class="blacktext">My looks</h2>
 
 </div>
-<div class="container">
+<div class="container height">
 
   <div class="row">
     {{#each selfieFromDb}} {{>selfieCard this}} {{/each}}
@@ -34,7 +34,7 @@
   <h2 class="blacktext">My makeup bag</h2>
 
 </div>
-<div class="container">
+<div class="container height">
   <div class="row">
     {{#each products}} {{>productCard this._product}} {{/each}}
   </div>
@@ -50,7 +50,7 @@
 </div>
 <div class="container">
 
-  <div class="row">
+  <div class="row height mb-3">
     {{#each likes}} {{>selfieCard this._selfie}} {{/each}}
   </div>
 </div>

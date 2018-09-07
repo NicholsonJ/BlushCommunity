@@ -297,7 +297,6 @@ c {
   -webkit-filter: brightness(0.6);
 }
 
-.hovereffect a,
 .hovereffect p {
   color: #fff;
   background-color: #616161;
@@ -342,17 +341,27 @@ c {
   z-index: 0;
   width: 100%;
   margin-bottom: 10px;
+  -webkit-box-shadow: 7px 10px 15px -5px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 7px 10px 15px -5px rgba(0, 0, 0, 0.68);
+  box-shadow: 7px 10px 15px -5px rgba(0, 0, 0, 0.68);
 }
 
 .fb-image-profile {
   margin: -90px 10px 30px 50px;
   z-index: 9;
   width: 20%;
+  border: 2px solid white;
+  -webkit-box-shadow: 7px 10px 15px -5px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 7px 10px 15px -5px rgba(0, 0, 0, 0.68);
+  box-shadow: 7px 10px 15px -5px rgba(0, 0, 0, 0.68);
 }
 
 .card-img {
   height: 100%;
   object-fit: cover;
+  -webkit-box-shadow: 7px 10px 15px -5px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 7px 10px 15px -5px rgba(0, 0, 0, 0.68);
+  box-shadow: 7px 10px 15px -5px rgba(0, 0, 0, 0.68);
 }
 
 @media (max-width: 768px) {
@@ -514,4 +523,8 @@ ul {
 
 .cursive {
   font-family: 'Kaushan Script', cursive;
+}
+
+.hide-login {
+  display: none;
 }

@@ -3,7 +3,12 @@
         <div class="title-text">
             <img src="/images/Blush.png" alt="Blush. A community for beauty trends" height="25%">
         </div>
+
         <div class="logincontainer">
+            {{#if ifConnected}}
+            <div class="hide-login">
+                {{/if}}
+            </div>
             <form action="/auth/login" method="POST" id="form-container">
                 <label for="email"></label>
                 <input id="email" type="text" name="email" placeholder="Email">
@@ -23,7 +28,9 @@
                     <a href="/auth/signup">Signup</a>
                 </h5>
             </form>
+
         </div>
+
     </div>
 </header>
 
