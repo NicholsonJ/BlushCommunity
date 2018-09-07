@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container height">
   <div class="container">
     <section class="col-xs-12 box filter">
       {{!--
@@ -93,17 +93,20 @@
 
 <hr>
 
-<div class="container text-center">
+<div class="container text-center height">
   <h2>Search Results</h2>
   <div class="row">
     {{#each productsFromDb }} {{>productCard this}} {{/each}}
   </div>
 </div>
 
-<div class="container text-center">
+<hr>
+
+<div class="container text-center height">
 
   <h2>My makeup bag</h2>
   <div class="row">
     {{#each products}} {{>productCard this._product}} {{/each}}
   </div>
+</div>
 </div>

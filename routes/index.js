@@ -16,10 +16,14 @@ router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
     .sort({ created_at: -1 })
     .populate('_user')
     .then(selfieFromDb => {
-      // let selfies = function(selfieFromDb) {
-      //   if (selfie._user._id === req.user._id) return (selfie.isOwner = true);
-      // };
-      res.render('feed', { selfieFromDb: selfieFromDb });
+      let selfies = selfieFromDb.map(selfie => {
+        if (selfie._user._id === req.user._id) {
+          selfie.isOwner = true;
+          console.log('this is an owned selfie');
+        }
+        return selfie;
+      });
+      res.render('feed', { selfieFromDb: selfies });
     });
 });
 

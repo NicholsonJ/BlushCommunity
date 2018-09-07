@@ -47,7 +47,7 @@ h5 {
 footer {
   background-color: #e3e3e3;
   color: black;
-  // position: fixed;
+  //position: absolute;
   // bottom: 0;
 }
 
@@ -473,4 +473,8 @@ ul {
 .justify-content-around {
   display: flex;
   justify-content: space-around !important;
+}
+
+.height {
+  min-height: 20vh;
 }
