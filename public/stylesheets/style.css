@@ -6716,6 +6716,7 @@ ul {
 
 .height {
   min-height: 20vh; }
+
 .blacktext {
   color: black; }
 
@@ -6731,5 +6732,8 @@ ul {
   border-right: 1px solid #fcb986;
   border-bottom: 1px solid #fcb986;
   border-left: 1px solid #fcb986; }
+
+.cursive {
+  font-family: 'Kaushan Script', cursive; }
 
 /*# sourceMappingURL=style.css.map */
