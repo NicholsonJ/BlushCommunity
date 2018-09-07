@@ -6754,16 +6754,10 @@ ul {
 
 .card-text {
   max-height: 7rem; }
-<<<<<<< HEAD
 
-
-  detail {
-    max-width: 500px;
-    margin: auto;
-    border: 25px solid #fcb986;
-    padding: 25px;
-    margin: 25px; }
-=======
->>>>>>> 9bd5c923bbb8900110d0d3094ebced8845714061
+.detail {
+  border: 25px solid #fcb986;
+  padding: 25px;
+  margin: 50px; }
 
 /*# sourceMappingURL=style.css.map */
