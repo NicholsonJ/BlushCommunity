@@ -1,7 +1,21 @@
+<div class="text-center">
 <h2>Let's change your Profile, {{username}}</h2>
-
-
+<img src={{image}} alt="" height="300px">
+<hr>
 <form action="/profile/{{id}}/edit" enctype="multipart/form-data" method="post">
-  Change your profile picture: <input type="file" name="newProfilePic" accept="image/*">
-  <button type="submit">Submit</button>
+  <h3>
+Change your profile picture:
+  </h3> 
+  <input class="text-center" type="file" name="newProfilePic" accept="image/*">
+  <br>
+  <br>
+ <div class="col-md text-center">
+        <input class="selfieSubmit" type="submit" value="Submit">
+      </div>
 </form>
+
+
+</div>
+
+<br>
+<br>
