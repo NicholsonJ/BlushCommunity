@@ -8,20 +8,24 @@ const Product = require('../models/Product');
 const ProductUser = require('../models/ProductUser');
 const uploadCloud = require('../config/cloudinary.js');
 
-router.get('/editProfile', ensureLoggedIn('/auth/login'), (req, res, next) => {
-  User.findById(req.user.id).then(userFromDb => {
+router.get('/profile/:id/edit', ensureLoggedIn('/auth/login'), (req, res, next) => {
+  User.findById(req._user._id).then(userFromDb => {
     res.render('profile/editProfile', userFromDb);
-  });
+  })
+.catch( err => { throw err } );
 });
 
-router.post('/editProfile', ensureLoggedIn('/auth/login'), (req, res, next) => {
+router.post('/profile/:id/edit', ensureLoggedIn('/auth/login'), (req, res, next) => {
   const updateProfile = {
     image: req.body.image
   };
-  User.update(updateProfile).then(selfieFromDb => {
+  User.findByIdAndUpdate(req.params.id,updateProfile).then(selfieFromDb => {
     console.log(selfieFromDb.title + ' was updated');
-  });
+    res.redirect(`/profile`);
+  })
+  .catch( err => { throw err });
 });
+
 
 router.get('/profile/:id', ensureLoggedIn('/auth/login'), (req, res, next) => {
   User.findById(req.params.id).then(userFromDb => {

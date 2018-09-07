@@ -6730,4 +6730,11 @@ ul {
   border-bottom: 1px solid #fcb986;
   border-left: 1px solid #fcb986; }
 
+.detail {
+  max-width: 500px;
+  margin: auto;
+  border: 25px solid #fcb986;
+  padding: 25px;
+  margin: 25px; }
+
 /*# sourceMappingURL=style.css.map */
