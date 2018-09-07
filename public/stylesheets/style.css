@@ -6334,6 +6334,9 @@ select {
 a {
   color: black; }
 
+a:hover {
+  color: #999999; }
+
 h1 {
   font-family: 'Josefin Sans', sans-serif; }
 
@@ -6714,7 +6717,7 @@ ul {
   margin: 0 auto; }
 
 .productCardTitle {
-  font-size: 12px; }
+  max-height: 3rem; }
 
 .jumbotronText {
   color: #616161;
@@ -6743,14 +6746,6 @@ ul {
   border-bottom: 1px solid #fcb986;
   border-left: 1px solid #fcb986; }
 
-<<<<<<< HEAD
-.detail {
-  max-width: 500px;
-  margin: auto;
-  border: 25px solid #fcb986;
-  padding: 25px;
-  margin: 25px; }
-=======
 .cursive {
   font-family: 'Kaushan Script', cursive; }
 
@@ -6759,6 +6754,5 @@ ul {
 
 .card-text {
   max-height: 7rem; }
->>>>>>> 8412a85d650276e8399913500399211850566df6
 
 /*# sourceMappingURL=style.css.map */
