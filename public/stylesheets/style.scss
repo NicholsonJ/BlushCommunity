@@ -13,8 +13,8 @@ body {
   background-repeat: no-repeat;
   position: relative;
   background-attachment: fixed;
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 select {
@@ -47,6 +47,7 @@ h5 {
   font-size: 1.2em;
   border: 0;
   background-color: #0d0d0d;
+  color: white;
 }
 
 .navbar-brand {
@@ -390,6 +391,7 @@ input[type='submit'] {
 .selfie {
   padding: 18px;
   background-color: #fcb986;
+  border-radius: 4px;
 }
 //search-form
 // form.example input[type=text] {
