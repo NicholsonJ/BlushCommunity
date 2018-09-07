@@ -6334,6 +6334,9 @@ select {
 a {
   color: black; }
 
+a:hover {
+  color: #999999; }
+
 h1 {
   font-family: 'Josefin Sans', sans-serif; }
 
@@ -6714,7 +6717,7 @@ ul {
   margin: 0 auto; }
 
 .productCardTitle {
-  font-size: 12px; }
+  max-height: 3rem; }
 
 .jumbotronText {
   color: #616161;
@@ -6751,6 +6754,7 @@ ul {
 
 .card-text {
   max-height: 7rem; }
+<<<<<<< HEAD
 
 
   detail {
@@ -6759,5 +6763,7 @@ ul {
     border: 25px solid #fcb986;
     padding: 25px;
     margin: 25px; }
+=======
+>>>>>>> 9bd5c923bbb8900110d0d3094ebced8845714061
 
 /*# sourceMappingURL=style.css.map */

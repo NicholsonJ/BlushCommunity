@@ -28,7 +28,7 @@ router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
 });
 
 router.get('/newproduct', ensureLoggedIn('/auth/login'), (req, res, next) => {
-  res.render('newProduct');
+  res.render('addProduct');
 });
 
 router.post(
