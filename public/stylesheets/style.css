@@ -6564,7 +6564,6 @@ c {
   color: #fff;
   background-color: #616161;
   border-radius: 2px;
-  padding: 1em 0;
   margin: 5px 0;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -6749,5 +6748,8 @@ ul {
 
 .hide-login {
   display: none; }
+
+.card-text {
+  max-height: 7rem; }
 
 /*# sourceMappingURL=style.css.map */
