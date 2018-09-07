@@ -6758,6 +6758,7 @@ ul {
 .detail {
   border: 25px solid #fcb986;
   padding: 25px;
-  margin: 50px; }
+  margin: 50px;
+  text-transform: capitalize; }
 
 /*# sourceMappingURL=style.css.map */
