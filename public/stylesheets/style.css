@@ -6316,17 +6316,26 @@ a.text-dark:hover, a.text-dark:focus {
   font-family: 'Josefin Sans', sans-serif; }
 
 body {
-  font-family: 'Kaushan Script', cursive;
+  font-family: 'Josefin Sans', sans-serif;
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  background-color: black;
+  color: white; }
+
+select {
+  font-size: 15px;
+  padding: 5px;
+  width: 150px;
+  height: 30px;
+  margin: 5px; }
 
 a {
   color: black; }
 
 h1 {
-  font-family: 'Kaushan Script', cursive; }
+  font-family: 'Josefin Sans', sans-serif; }
 
 h2,
 h3,
@@ -6436,7 +6445,7 @@ footer {
   padding-top: 20px; }
 
 .whiteText {
-  color: #ffffff; }
+  color: white; }
 
 .button {
   border-radius: 4px;
@@ -6500,7 +6509,7 @@ c {
   font-size: 25px; }
 
 .credentials {
-  background-image: url(../images/background.jpg);
+  background-image: url(../images/backgroundCover.jpeg);
   text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -6629,7 +6638,7 @@ input[type='submit'] {
   cursor: pointer; }
 
 .selfie {
-  padding: 30px;
+  padding: 18px;
   background-color: #fcb986; }
 
 /* Style the submit button */
@@ -6678,8 +6687,9 @@ ul {
   text-align: center; }
 
 .selfieForm {
-  background-image: url("../images/selfieFormImg.jpg");
-  background-size: cover; }
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; }
 
 .selfieForm label {
   text-align: center;
@@ -6706,5 +6716,20 @@ ul {
 
 .height {
   min-height: 20vh; }
+.blacktext {
+  color: black; }
+
+.col-centered {
+  float: none;
+  margin: 0 auto; }
+
+.boxed {
+  color: black;
+  background-color: #fcb986;
+  padding: 5px;
+  border-top: 1px solid #fcb986;
+  border-right: 1px solid #fcb986;
+  border-bottom: 1px solid #fcb986;
+  border-left: 1px solid #fcb986; }
 
 /*# sourceMappingURL=style.css.map */

@@ -2,7 +2,10 @@
   <div class="card hovereffect border-0" style="width: 20rem; min-height: 20rem; border: 10px solid black;">
     <img class="card-img" src={{image}} alt="Card image cap">
     <div class="card-body overlay">
-      <h5 class="card-title">{{title}}</h5>
+      <h5 class="card-title">
+        {{!-- <a href="{{this.user._id}}"></a> --}}
+          {{title}}
+      </h5>
       <p class="card-text">{{comment}}</p>
       {{#if isOwner}}
       <button type="button" class="btn deletebutton btn-sm" id={{ _id }} onclick="deleteThis(this)">

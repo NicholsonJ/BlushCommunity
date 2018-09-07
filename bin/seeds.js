@@ -1,12 +1,15 @@
+require('dotenv').config();
+
 const mongoose = require('mongoose');
 const Product = require('../models/Product');
 const makeup = require('../data.js');
 
-mongoose
-  .connect(
-    'mongodb://localhost/makeup',
-    { useNewUrlParser: true }
-  )
+// mongoose
+//   .connect(
+//     'mongodb://localhost/makeup',
+//     { useNewUrlParser: true }
+//   )
+mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`);
   })
