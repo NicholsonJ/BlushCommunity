@@ -2,9 +2,9 @@
   <div class="card hovereffect border-0" style="width: 20rem; min-height: 20rem; border: 10px solid black;">
     <img class="card-img" src={{image}} alt="Card image cap">
     <div class="card-body overlay">
+
       <h5 class="card-title">
-        {{!-- <a href="{{this.user._id}}"></a> --}}
-          {{title}}
+        <a href="/profile/{{_user._id}}" class="card-profile cursive">{{_user.username}}</a><br> {{title}}
       </h5>
       <p class="card-text">{{comment}}</p>
       {{#if isOwner}}

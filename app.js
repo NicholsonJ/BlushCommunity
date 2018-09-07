@@ -14,11 +14,15 @@ const MongoStore = require('connect-mongo')(session);
 const flash = require('connect-flash');
 
 // mongoose
-//   .connect(
-  //     'mongodb://localhost/makeup',
-  //     { useNewUrlParser: true }
-  //   )
-  mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true })
+//   // .connect(
+//   //   'mongodb://localhost/makeup',
+//   //   { useNewUrlParser: true }
+//   // )
+mongoose
+  .connect(
+    process.env.MONGODB_URI,
+    { useNewUrlParser: true }
+  )
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`);
   })
@@ -63,7 +67,7 @@ hbs.registerHelper('ifUndefined', (value, options) => {
 });
 
 // default value for title local
-app.locals.title = 'Vibe_me';
+app.locals.title = 'Blush';
 
 // Enable authentication using session + passport
 app.use(

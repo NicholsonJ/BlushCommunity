@@ -13,12 +13,11 @@ body {
   background-repeat: no-repeat;
   position: relative;
   background-attachment: fixed;
-  background-color: black;
-  color:white;
-
+  background-color: white;
+  color: black;
 }
 
-select{
+select {
   font-size: 15px;
   padding: 5px;
   width: 150px;
@@ -48,6 +47,7 @@ h5 {
   font-size: 1.2em;
   border: 0;
   background-color: #0d0d0d;
+  color: white;
 }
 
 .navbar-brand {
@@ -58,7 +58,7 @@ h5 {
 footer {
   background-color: #e3e3e3;
   color: black;
-  // position: fixed;
+  //position: absolute;
   // bottom: 0;
 }
 
@@ -166,7 +166,7 @@ footer {
 }
 .whiteText {
   // color: #ffffff;
-  color:white;
+  color: white;
 }
 .button {
   border-radius: 4px;
@@ -297,12 +297,11 @@ c {
   -webkit-filter: brightness(0.6);
 }
 
-.hovereffect a,
 .hovereffect p {
   color: #fff;
   background-color: #616161;
   border-radius: 2px;
-  padding: 1em 0;
+  // padding: 1em 0;
   margin: 5px 0;
   opacity: 0;
   filter: alpha(opacity=0);
@@ -342,17 +341,27 @@ c {
   z-index: 0;
   width: 100%;
   margin-bottom: 10px;
+  -webkit-box-shadow: 7px 10px 15px -5px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 7px 10px 15px -5px rgba(0, 0, 0, 0.68);
+  box-shadow: 7px 10px 15px -5px rgba(0, 0, 0, 0.68);
 }
 
 .fb-image-profile {
   margin: -90px 10px 30px 50px;
   z-index: 9;
   width: 20%;
+  border: 2px solid white;
+  -webkit-box-shadow: 7px 10px 15px -5px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 7px 10px 15px -5px rgba(0, 0, 0, 0.68);
+  box-shadow: 7px 10px 15px -5px rgba(0, 0, 0, 0.68);
 }
 
 .card-img {
   height: 100%;
   object-fit: cover;
+  -webkit-box-shadow: 7px 10px 15px -5px rgba(0, 0, 0, 0.68);
+  -moz-box-shadow: 7px 10px 15px -5px rgba(0, 0, 0, 0.68);
+  box-shadow: 7px 10px 15px -5px rgba(0, 0, 0, 0.68);
 }
 
 @media (max-width: 768px) {
@@ -391,6 +400,7 @@ input[type='submit'] {
 .selfie {
   padding: 18px;
   background-color: #fcb986;
+  border-radius: 4px;
 }
 //search-form
 // form.example input[type=text] {
@@ -489,30 +499,36 @@ ul {
   justify-content: space-around !important;
 }
 
+.height {
+  min-height: 20vh;
+}
 .blacktext {
-  color:black;
-
+  color: black;
 }
 
-.col-centered{
+.col-centered {
   float: none;
   margin: 0 auto;
-  }
-
-  .boxed {
-    color: black;
-    background-color: #fcb986;
-    padding: 5px;
-    border-top: 1px solid #fcb986;
-    border-right: 1px solid #fcb986;
-    border-bottom: 1px solid #fcb986;
-    border-left: 1px solid #fcb986;
 }
-  
-.detail{
-  max-width: 500px;
-  margin: auto;
-  border: 25px solid #fcb986;
-  padding: 25px;
-  margin: 25px;
+
+.boxed {
+  color: black;
+  background-color: #fcb986;
+  padding: 5px;
+  border-top: 1px solid #fcb986;
+  border-right: 1px solid #fcb986;
+  border-bottom: 1px solid #fcb986;
+  border-left: 1px solid #fcb986;
+}
+
+.cursive {
+  font-family: 'Kaushan Script', cursive;
+}
+
+.hide-login {
+  display: none;
+}
+
+.card-text {
+  max-height: 7rem;
 }

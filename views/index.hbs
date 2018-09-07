@@ -3,7 +3,12 @@
         <div class="title-text">
             <img src="/images/Blush.png" alt="Blush. A community for beauty trends" height="25%">
         </div>
+
         <div class="logincontainer">
+            {{#if ifConnected}}
+            <div class="hide-login">
+                {{/if}}
+            </div>
             <form action="/auth/login" method="POST" id="form-container">
                 <label for="email"></label>
                 <input id="email" type="text" name="email" placeholder="Email">
@@ -23,27 +28,26 @@
                     <a href="/auth/signup">Signup</a>
                 </h5>
             </form>
+
         </div>
+
     </div>
 </header>
 
 <div id="product">
     <div class="container text-center whiteText">
-        <h2>What is Glam Vibe?</h2>
+        <h2>What is Blush</h2>
     </div>
     <div class="row justify-content-around blacktext">
         <div class="col-md-3 box text-center glamvibe-pic1 glampics">
-            {{!-- <img src="images/pic1.jpg"></img> --}}
-            <h3>We are an online community</h3>
+            <h3>Discover an online community</h3>
         </div>
 
         <div class="col-md-3 box text-center glamvibe-pic2 glampics">
-            {{!-- <img src="images/pic1.jpg"></img> --}}
             <h3>Share products and looks</h3>
         </div>
 
         <div class="col-md-3 box text-center glamvibe-pic3 glampics">
-            {{!-- <img src="images/pic1.jpg"></img> --}}
             <h3>Build your own collection</h3>
         </div>
     </div>
@@ -52,21 +56,28 @@
 <!--End of PRODUCT-->
 
 <div id="about" class="text-center whiteText">
-    <h2>About Us</h2>
-    <h5>It is a complete beauty brand spanning colour cosmetics & skin care</h5>
-    <div class="row">
+    <h2 class="mb-3 mt-3">About Us</h2>
+    <hr>
+    <hr>
+    <h5 lass="mt-2 mb-3 p-3">As two women beginning our careers in coding, we realized the opportunity to create a product
+        that we would both use and share with our friends. Though we often wear makeup, we found that women wouldn't discuss
+        it unless they found themselves in the powder room. We began Blush as a virtual community to love and share what
+        we use every day. We can't wait for your to join us!
+    </h5>
+    <hr>
+    <hr>
+    <hr>
+    <div class="row mt-6">
 
-        <div class="col-md-6 text-center ">
-            <img class="aboutus-pic" src="../images/bhavs.png" alt="Avatar">
+        <div class="col-md-6 text-center cursive">
             <c>
-                <p>Bhavana</p>
+                <h1 class="cursive">Bhavana</h1>
             </c>
         </div>
 
-        <div class="col-md-6 text-center">
-            <img class="aboutus-pic" src="../images/jen.png" alt="Avatar">
+        <div class="col-md-6 text-center cursive">
             <c>
-                <p>Jennifer</p>
+                <h1 class="cursive">Jennifer</h1>
             </c>
         </div>
     </div>

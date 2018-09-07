@@ -15,7 +15,7 @@
 <body>
   {{#if isConnected}}
   <nav class="navbar navbar-expand-lg navbar-dark">
-    <a class="navbar-brand" href="/">Blush</a>
+    <a href="/" class="cursive mr-5" style="color: white; font-size: 40px; text-decoration: none;">Blush</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown"
       aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -24,20 +24,20 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/feed">Community</a>
+          <a class="nav-link mr-3" href="/feed">Community</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/profile/{{currentUser._id}}">MyProfile</a>
+          <a class="nav-link mr-3" href="/profile/{{currentUser._id}}">My Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/selfie">NewLook</a>
+          <a class="nav-link mr-3" href="/selfie">My Look</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="/mybag">MyBag</a>
+          <a class="nav-link mr-3" href="/mybag">My Bag</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/auth/logout">Logout</a>
+          <a class="nav-link mr-3" href="/auth/logout">Logout</a>
         </li>
       </ul>
     </div>
