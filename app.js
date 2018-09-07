@@ -62,7 +62,7 @@ hbs.registerHelper('ifUndefined', (value, options) => {
 });
 
 // default value for title local
-app.locals.title = 'Vibe_me';
+app.locals.title = 'Blush';
 
 // Enable authentication using session + passport
 app.use(

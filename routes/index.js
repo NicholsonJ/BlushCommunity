@@ -12,30 +12,15 @@ router.get('/', (req, res, next) => {
   res.render('index');
 });
 router.get('/feed', ensureLoggedIn('/auth/login'), (req, res, next) => {
-  let filter = {};
-  if (req.query.brand && req.query.products) {
-    Promise.all([
-      Selfie.find()
-        .sort({ created_at: -1 })
-        .populate('_user'),
-      Product.find({
-        $and: [{ brand: { $eq: req.query.brand } }, { productType: { $eq: req.query.products } }]
-      })
-    ]).then(([selfieFromDb, productsFromDb]) => {
+  Selfie.find()
+    .sort({ created_at: -1 })
+    .populate('_user')
+    .then(selfieFromDb => {
       // let selfies = function(selfieFromDb) {
       //   if (selfie._user._id === req.user._id) return (selfie.isOwner = true);
       // };
-      console.log(productsFromDb);
-      res.render('feed', { selfieFromDb: selfieFromDb, productsFromDb: productsFromDb });
+      res.render('feed', { selfieFromDb: selfieFromDb });
     });
-  } else {
-    Selfie.find()
-      .sort({ created_at: -1 })
-      .populate('_user')
-      .then(selfieFromDb => {
-        res.render('feed', { selfieFromDb: selfieFromDb });
-      });
-  }
 });
 
 router.get('/newproduct', ensureLoggedIn('/auth/login'), (req, res, next) => {
@@ -93,39 +78,40 @@ router.get('/product/:productId', (req, res, next) => {
 
 router.get('/mybag', ensureLoggedIn('/auth/login'), (req, res, next) => {
   if (req.query.brand && req.query.products) {
-      User.findById(req.user._id).then(userFromDb => {
-        ProductUser.find({ _user: req.user._id })
+    User.findById(req.user._id).then(userFromDb => {
+      ProductUser.find({ _user: req.user._id })
         .sort({ created_at: -1 })
         .populate('_product')
         .populate('_user')
         .then(productUserFromDb => {
           Product.find({
             $and: [{ brand: { $eq: req.query.brand } }, { productType: { $eq: req.query.products } }]
-          })
-        .then( productsFromDb => {
-          // let selfies = function(selfieFromDb) {
-          //   if (selfie._user._id === req.user._id) return (selfie.isOwner = true);
-          // };
-          res.render('mybag', {
-            products: productUserFromDb,
-            user: userFromDb,
-            productsFromDb: productsFromDb,
+          }).then(productsFromDb => {
+            // let selfies = function(selfieFromDb) {
+            //   if (selfie._user._id === req.user._id) return (selfie.isOwner = true);
+            // };
+            res.render('mybag', {
+              products: productUserFromDb,
+              user: userFromDb,
+              productsFromDb: productsFromDb
+            });
           });
-        });  
+        });
     });
-  })} else {
+  } else {
     User.findById(req.user._id).then(userFromDb => {
       ProductUser.find({ _user: req.user._id })
-      .sort({ created_at: -1 })
-      .populate('_product')
-      .populate('_user')
-      .then(productUserFromDb =>{
-        res.render('mybag', {
-          products: productUserFromDb,
-          user: userFromDb})
-        })
-      })
-}
+        .sort({ created_at: -1 })
+        .populate('_product')
+        .populate('_user')
+        .then(productUserFromDb => {
+          res.render('mybag', {
+            products: productUserFromDb,
+            user: userFromDb
+          });
+        });
+    });
+  }
 });
 
 // router.get('/mybag', ensureLoggedIn('/auth/login'), (req, res, next) => {
@@ -138,10 +124,8 @@ router.get('/mybag', ensureLoggedIn('/auth/login'), (req, res, next) => {
 //       console.log(productsFromDb);
 //       res.render('mybag');
 //     });
-//   } 
+//   }
 // });
 
-router.get('/mybag/', ensureLoggedIn('/auth/login'), (req, res, next) => {
-  
-});
+router.get('/mybag/', ensureLoggedIn('/auth/login'), (req, res, next) => {});
 module.exports = router;
