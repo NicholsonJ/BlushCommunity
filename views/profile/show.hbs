@@ -1,11 +1,13 @@
 <div class="container">
   <div class="fb-profile">
     <img align="left" class="fb-image-lg" src="/images/profileCover.jpg" alt="Profile image example" height="300">
-    <img align="left" class="fb-image-profile thumbnail" src={{user.image}} alt="This is your profile pic!"> 
-    <a href="/profile/{{user._id}}/edit" class="btn btn-success">Edit</a>
+    <img align="left" class="fb-image-profile thumbnail" src={{user.image}} alt="This is your profile pic!">
+
     <div class="fb-image-text">
       <h1 class="cursive">{{user.username}}</h1>
+
       <p>Style through community.</p>
+      <a href="/profile/{{user._id}}/edit" class="cursive">Edit</a>
     </div>
 
   </div>
