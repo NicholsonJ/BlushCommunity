@@ -1,5 +1,8 @@
 {
   "name": "makeup",
+  "engines": {
+    "node": "v10.6.0"
+  },
   "version": "0.0.0",
   "private": true,
   "scripts": {
